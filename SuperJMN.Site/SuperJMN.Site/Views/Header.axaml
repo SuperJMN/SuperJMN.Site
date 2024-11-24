@@ -1,0 +1,19 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="1000" d:DesignHeight="450"
+             x:Class="SuperJMN.Site.Views.Header" Foreground="White" 
+             FontWeight="SemiBold" FontFamily="{StaticResource Rubik}"  Background="#717171">
+
+    <Grid ColumnDefinitions="1* 5* 5*">
+        <Grid.Background>
+            <ImageBrush Source="/Assets/background.jpg" Opacity="0.5" Stretch="UniformToFill" />
+        </Grid.Background>
+        <StackPanel Grid.Column="1" Grid.ColumnSpan="2" VerticalAlignment="Center">
+            <TextBlock Text="I'm José Manuel Nieto" FontSize="40" />
+            <TextBlock Text="Open source contributor" FontSize="30" />
+        </StackPanel>
+    </Grid>
+
+</UserControl>

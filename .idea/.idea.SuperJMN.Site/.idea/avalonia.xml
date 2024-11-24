@@ -3,7 +3,13 @@
   <component name="AvaloniaProject">
     <option name="projectPerEditor">
       <map>
-        <entry key="SuperJMN.Site/SuperJMN.Site/Views/MainView.axaml" value="SuperJMN.Site/SuperJMN.Site.Browser/SuperJMN.Site.Browser.csproj" />
+        <entry key="SuperJMN.Site/SuperJMN.Site/App.axaml" value="SuperJMN.Site/SuperJMN.Site.Desktop/SuperJMN.Site.Desktop.csproj" />
+        <entry key="SuperJMN.Site/SuperJMN.Site/Views/Experience.axaml" value="SuperJMN.Site/SuperJMN.Site.Desktop/SuperJMN.Site.Desktop.csproj" />
+        <entry key="SuperJMN.Site/SuperJMN.Site/Views/Header.axaml" value="SuperJMN.Site/SuperJMN.Site.Desktop/SuperJMN.Site.Desktop.csproj" />
+        <entry key="SuperJMN.Site/SuperJMN.Site/Views/MainView.axaml" value="SuperJMN.Site/SuperJMN.Site.Desktop/SuperJMN.Site.Desktop.csproj" />
+        <entry key="SuperJMN.Site/SuperJMN.Site/Views/MainWindow.axaml" value="SuperJMN.Site/SuperJMN.Site.Desktop/SuperJMN.Site.Desktop.csproj" />
+        <entry key="SuperJMN.Site/SuperJMN.Site/Views/Skills.axaml" value="SuperJMN.Site/SuperJMN.Site.Desktop/SuperJMN.Site.Desktop.csproj" />
+        <entry key="SuperJMN.Site/SuperJMN.Site/Views/ThisIsMe.axaml" value="SuperJMN.Site/SuperJMN.Site.Desktop/SuperJMN.Site.Desktop.csproj" />
       </map>
     </option>
   </component>

@@ -1,8 +1,126 @@
-﻿namespace SuperJMN.Site.ViewModels;
+﻿using System.Collections;
+using System.Collections.Generic;
+
+namespace SuperJMN.Site.ViewModels;
 
 public class MainViewModel : ViewModelBase
 {
 #pragma warning disable CA1822 // Mark members as static
     public string Greeting => "Welcome to Avalonia!";
 #pragma warning restore CA1822 // Mark members as static
+
+    public MainViewModel()
+    {
+        Skills =
+        [
+            new Skill
+            {
+                Name = "C#",
+                Percent = 100,
+            },
+            new Skill
+            {
+                Name = "Avalonia",
+                Percent = 93,
+            },
+            new Skill
+            {
+                Name = "Reactive programming",
+                Percent = 95,
+            },
+            new Skill
+            {
+                Name = "Compilers & parsers",
+                Percent = 60,
+            },
+            new Skill
+            {
+                Name = "Kubernetes",
+                Percent = 35,
+            },
+            new Skill
+            {
+                Name = "Perfection seeking",
+                Percent = 86,
+            },
+            new Skill
+            {
+                Name = "Analytical skills",
+                Percent = 90,
+            },
+            new Skill
+            {
+                Name = "Best .NET dev in the world (working hard to it!)",
+                Percent = 65,
+            }
+        ];
+
+        Experiences =
+        [
+            new Experience
+            {
+                Name = "Wasabi Wallet",
+                Description = "User interface & Code",
+                YearStart = 2022,
+                YearEnd = 2024,
+            },
+            new Experience
+            {
+                Name = "Fluendo",
+                Description = "Creating the next version of LongoMatch",
+                YearStart = 2021,
+                YearEnd = 2022,
+            },
+
+            new Experience
+            {
+                Name = "Bravent",
+                Description = "Working for companies like Microsoft, Banco Santander, LaLiga, Ibercaja…",
+                YearStart = 2015,
+                YearEnd = 2020,
+            },
+
+            new Experience
+            {
+                Name = "Payvision",
+                Description = "Fraud detection and payment processing.",
+                YearStart = 2014,
+                YearEnd = 2015,
+            },
+
+            new Experience
+            {
+                Name = "DocPath",
+                Description = "Creating DocPath’s Designer, a rich WYSIWYG designer to create documents.",
+                YearStart = 2012,
+                YearEnd = 2014,
+            },
+
+            new Experience
+            {
+                Name = "Quirón Salud",
+                Description = "Building Casiopea application, integral healthcare solution",
+                YearStart = 2011,
+                YearEnd = 2012,
+            },
+
+        ];
+    }
+
+    public IEnumerable<Skill> Skills { get; set; }
+    public IEnumerable<Experience> Experiences { get; set; }
+}
+
+public class Experience
+{
+    public int YearStart { get; set; }
+    public int YearEnd { get; set; }
+    public string Name { get; set; }
+    public string Description { get; set; }
+}
+
+public class Skill
+{
+    public string Name { get; set; }
+    public int Percent { get; set; }
 }

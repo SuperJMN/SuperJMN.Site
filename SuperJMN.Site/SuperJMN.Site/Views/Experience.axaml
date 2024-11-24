@@ -1,0 +1,59 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:viewModels="clr-namespace:SuperJMN.Site.ViewModels"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="SuperJMN.Site.Views.Experience" x:DataType="viewModels:MainViewModel">
+    <Design.DataContext>
+        <viewModels:MainViewModel />
+    </Design.DataContext>
+
+    <HeaderedContentControl Header="EXPERIENCE">
+        <HeaderedContentControl.HeaderTemplate>
+            <DataTemplate DataType="x:Object">
+                <TextBlock Margin="0 0 0 20" Classes="Section" Text="{Binding}" />
+            </DataTemplate>
+        </HeaderedContentControl.HeaderTemplate>
+        <ItemsControl ItemsSource="{Binding Experiences}">
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <DockPanel>
+                        <DockPanel>
+                            <Ellipse DockPanel.Dock="Top" Stroke="{StaticResource AlmostBlack}" Width="20" Height="20" StrokeThickness="2" VerticalAlignment="Top">
+                                <Ellipse.Transitions>
+                                    <Transitions>
+                                        <BrushTransition Property="Fill" Duration="0:0:0.2" />
+                                    </Transitions>
+                                </Ellipse.Transitions>
+                                <Ellipse.Styles>
+                                    <Style Selector="Ellipse">
+                                        <Setter Property="Fill" Value="Transparent" />
+                                    </Style>
+                                    <Style Selector="Ellipse:pointerover">
+                                        <Setter Property="Fill" Value="{StaticResource AlmostBlack}" />
+                                    </Style>
+                                </Ellipse.Styles>
+                            </Ellipse>
+                            <Border Background="Gray"
+                                    VerticalAlignment="Stretch"
+                                    HorizontalAlignment="Center"
+                                    Width="2" />
+                        </DockPanel>
+                        <StackPanel Spacing="5" Margin="20 0 0 20">
+                            <TextBlock FontSize="16" FontWeight="Black" Text="{Binding Name}" />
+                            <TextBlock FontSize="16" Foreground="{StaticResource AlmostBlackClearer}" FontWeight="Black">
+                                <TextBlock.Inlines>
+                                    <Run Text="{Binding YearStart}" />
+                                    <Run>-</Run>
+                                    <Run Text="{Binding YearEnd}" />
+                                </TextBlock.Inlines>
+                            </TextBlock>
+                            <TextBlock FontSize="16" Foreground="{StaticResource AlmostBlackClearer}" Text="{Binding Description}" />
+                        </StackPanel>
+                    </DockPanel>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
+    </HeaderedContentControl>
+</UserControl>

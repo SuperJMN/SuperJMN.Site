@@ -1,0 +1,17 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="1200"
+             x:Class="SuperJMN.Site.Views.ThisIsMe">
+    <WrapPanel ItemWidth="500" HorizontalAlignment="Center">
+        <StackPanel Margin="10">
+            <TextBlock FontSize="40" FontWeight="Black" Foreground="#6F6F6F">THIS IS ME</TextBlock>
+            <TextBlock Foreground="#6F6F6F" TextWrapping="Wrap" FontSize="16" Margin="0 20">
+                Hi, thank You for taking a look around my site. If you have any questions feel free to reach out on
+            </TextBlock>
+            <Button FontSize="18" Background="Transparent" BorderBrush="Black" BorderThickness="2" FontWeight="Bold" CornerRadius="0" Padding="10" Content="SEE MY GITHUB PROFILE" Margin="0 40" />
+        </StackPanel>
+        <Image Width="400" Stretch="Uniform" Source="/Assets/profile.jpg" Margin="20" />
+    </WrapPanel>
+</UserControl>
