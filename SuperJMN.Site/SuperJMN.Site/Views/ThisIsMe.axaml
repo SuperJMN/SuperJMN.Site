@@ -54,7 +54,7 @@
         
     </UserControl.Resources>
     
-    <WrapPanel ItemWidth="500">
+    <WrapPanel ItemWidth="450">
         <StackPanel Margin="10">
             <TextBlock FontSize="40" FontWeight="Black" Foreground="#6F6F6F">THIS IS ME</TextBlock>
             <TextBlock Foreground="#6F6F6F" TextWrapping="Wrap" FontSize="16" Margin="0 20">

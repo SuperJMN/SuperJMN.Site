@@ -4,15 +4,15 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d" d:DesignWidth="1000" d:DesignHeight="450"
              x:Class="SuperJMN.Site.Views.Header" Foreground="White" 
-             FontWeight="SemiBold" FontFamily="{StaticResource Rubik}"  Background="#717171">
+             FontWeight="SemiBold" FontFamily="{StaticResource Rubik}" Background="#2F2F2F">
 
-    <Grid ColumnDefinitions="1* 5* 5*">
+    <Grid ColumnDefinitions="2* 6* 5*">
         <Grid.Background>
             <ImageBrush Source="/Assets/background.jpg" Opacity="0.5" Stretch="UniformToFill" />
         </Grid.Background>
         <StackPanel Grid.Column="1" Grid.ColumnSpan="2" VerticalAlignment="Center">
-            <TextBlock Text="I'm José Manuel Nieto" FontSize="40" />
-            <TextBlock Text="Open source contributor" FontSize="30" />
+            <TextBlock Text="I'm José Manuel Nieto" FontSize="60" />
+            <TextBlock Text="Open source contributor" FontSize="40" />
         </StackPanel>
     </Grid>
 
