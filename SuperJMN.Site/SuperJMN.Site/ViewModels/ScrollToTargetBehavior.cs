@@ -1,4 +1,5 @@
 using System;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Reactive.Disposables;
 using System.Reactive.Linq;
@@ -30,6 +31,7 @@ public class ScrollToTargetBehavior : AttachedToVisualTreeBehavior<InputElement>
         return obj.GetValue(TargetIdProperty);
     }
 
+    [DynamicDependency(DynamicallyAccessedMemberTypes.All, typeof(DisposableMixins))]
     protected override void OnAttachedToVisualTree(CompositeDisposable disposable)
     {
         if (AssociatedObject is null)
