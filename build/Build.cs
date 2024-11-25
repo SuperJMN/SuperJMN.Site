@@ -1,44 +1,43 @@
-using System;
-using System.Linq;
+using CSharpFunctionalExtensions;
 using Nuke.Common;
-using Nuke.Common.CI;
-using Nuke.Common.Execution;
-using Nuke.Common.IO;
+using Nuke.Common.Git;
 using Nuke.Common.ProjectModel;
-using Nuke.Common.Tooling;
-using Nuke.Common.Utilities.Collections;
-using static Nuke.Common.EnvironmentInfo;
-using static Nuke.Common.IO.FileSystemTasks;
-using static Nuke.Common.IO.PathConstruction;
+using Nuke.Common.Tools.DotNet;
+using Nuke.Common.Tools.GitVersion;
+using Zafiro.Deployment;
+using Zafiro.Misc;
+using static Nuke.Common.Tools.DotNet.DotNetTasks;
 
 class Build : NukeBuild
 {
-    /// Support plugins are available for:
-    ///   - JetBrains ReSharper        https://nuke.build/resharper
-    ///   - JetBrains Rider            https://nuke.build/rider
-    ///   - Microsoft VisualStudio     https://nuke.build/visualstudio
-    ///   - Microsoft VSCode           https://nuke.build/vscode
+    [Parameter("GitHub Authentication Token")] [Secret] readonly string GitHubApiKey;
+    [Parameter] readonly bool Force;
+    [Solution] readonly Solution Solution;
+    [GitVersion] readonly GitVersion GitVersion;
+    [GitRepository] readonly GitRepository Repository;
 
-    public static int Main () => Execute<Build>(x => x.Compile);
+    public static int Main() => Execute<Build>(x => x.Publish);
 
-    [Parameter("Configuration to build - Default is 'Debug' (local) or 'Release' (server)")]
-    readonly Configuration Configuration = IsLocalBuild ? Configuration.Debug : Configuration.Release;
-
-    Target Clean => _ => _
-        .Before(Restore)
+    Target RestoreWorkloads => td => td
         .Executes(() =>
         {
+            DotNetWorkloadRestore(x => x.SetProject(Solution));
         });
 
-    Target Restore => _ => _
-        .Executes(() =>
+    Target PublishSite => d => d
+        .Requires(() => GitHubApiKey)
+        .DependsOn(RestoreWorkloads)
+        .OnlyWhenStatic(() => Repository.IsOnMainOrMasterBranch() || Force)
+        .Executes(async () =>
         {
+            await Solution.AllProjects.TryFirst(project => project.Name.EndsWith(".Browser"))
+                .ToResult("Browser project not found")
+                .Map(project => project.Path.ToString())
+                .Bind(projectPath => Deployer.Instance.PublishAvaloniaAppToGitHubPages(projectPath, "SuperJMN", "Site", GitHubApiKey))
+                .TapError(error => Assert.Fail(error.ToString()))
+                .LogInfo("Site published");
         });
 
-    Target Compile => _ => _
-        .DependsOn(Restore)
-        .Executes(() =>
-        {
-        });
-
+    Target Publish => td => td
+        .DependsOn(PublishSite);
 }
