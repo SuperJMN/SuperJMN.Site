@@ -16,7 +16,7 @@
         </DataTemplate>
     </UserControl.DataTemplates>
     
-    <ItemsControl ItemsSource="{Binding  SocialNetworks}">
+    <ItemsControl ItemsSource="{Binding  SocialNetworks}" viewModels:ScrollToTargetBehavior.TargetId="SocialNetworks">
         <ItemsControl.ItemsPanel>
             <ItemsPanelTemplate>
                 <WrapPanel ItemWidth="80" ItemHeight="86" />

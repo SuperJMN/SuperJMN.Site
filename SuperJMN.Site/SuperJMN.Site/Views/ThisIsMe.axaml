@@ -2,7 +2,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             mc:Ignorable="d" d:DesignWidth="500"
+             xmlns:viewModels="clr-namespace:SuperJMN.Site.ViewModels"
+             mc:Ignorable="d" 
              x:Class="SuperJMN.Site.Views.ThisIsMe">
     
     <UserControl.Resources>
@@ -16,6 +17,7 @@
         <SolidColorBrush x:Key="HyperlinkButtonForegroundPressed" Color="White" />
         
         <ControlTheme x:Key="GitHubButton" TargetType="HyperlinkButton" BasedOn="{StaticResource {x:Type HyperlinkButton}}">
+            <ControlTheme.Resources></ControlTheme.Resources>
             <Setter Property="CornerRadius" Value="0" />
             <Setter Property="FontSize" Value="18" />
             <Setter Property="BorderThickness" Value="2" />
@@ -31,7 +33,16 @@
         <StackPanel Margin="10">
             <TextBlock FontSize="40" FontWeight="Black" Foreground="#6F6F6F">THIS IS ME</TextBlock>
             <TextBlock Foreground="#6F6F6F" TextWrapping="Wrap" FontSize="16" Margin="0 20">
-                Hi, thank You for taking a look around my site. If you have any questions feel free to reach out on
+                <TextBlock.Inlines>
+                    <Run>Hi, thank You for taking a look around my site. If you have any questions feel free to reach out on</Run>
+                    <InlineUIContainer>
+                        <HyperlinkButton VerticalAlignment="Center" Content="Github, LinkedIn or X">
+                            <Interaction.Behaviors>
+                                <viewModels:ScrollToTargetBehavior TargetId="Experience" />
+                            </Interaction.Behaviors>
+                        </HyperlinkButton>
+                    </InlineUIContainer>
+                </TextBlock.Inlines>
             </TextBlock>
             <HyperlinkButton Theme="{StaticResource GitHubButton}" NavigateUri="https://www.github.com/SuperJMN" Content="SEE MY GITHUB PROFILE" Margin="0 40" />
         </StackPanel>

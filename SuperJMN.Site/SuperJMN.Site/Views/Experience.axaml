@@ -9,7 +9,7 @@
         <viewModels:MainViewModel />
     </Design.DataContext>
 
-    <HeaderedContentControl Header="EXPERIENCE">
+    <HeaderedContentControl Header="EXPERIENCE" viewModels:ScrollToTargetBehavior.TargetId="Experience">
         <HeaderedContentControl.HeaderTemplate>
             <DataTemplate DataType="x:Object">
                 <TextBlock Margin="0 0 0 20" Classes="Section" Text="{Binding}" />
