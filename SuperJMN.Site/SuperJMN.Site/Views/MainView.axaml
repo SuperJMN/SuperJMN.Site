@@ -4,7 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:vm="clr-namespace:SuperJMN.Site.ViewModels"
              xmlns:views="clr-namespace:SuperJMN.Site.Views"
-             mc:Ignorable="d" d:DesignWidth="1200"
+             mc:Ignorable="d" d:DesignWidth="1400"
              x:Class="SuperJMN.Site.Views.MainView"
              x:DataType="vm:MainViewModel">
     <Design.DataContext>
@@ -14,14 +14,15 @@
     </Design.DataContext>
 
     <ScrollViewer VerticalScrollBarVisibility="Auto">
-        <StackPanel>
+        <StackPanel HorizontalAlignment="Center" Spacing="50">
             <views:Header Height="600" />
             <views:ThisIsMe Margin="100" />
-            <WrapPanel ItemWidth="550" HorizontalAlignment="Center">
+            <WrapPanel ItemWidth="550" >
                 <views:Experience Margin="50 0" />
                 <views:Skills Margin="50 0" />
             </WrapPanel>
-            <views:MyWork HorizontalAlignment="Center" /> 
+            <views:MyWork />
+            <views:Social HorizontalAlignment="Center" />
         </StackPanel>
     </ScrollViewer>
 </UserControl>

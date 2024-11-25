@@ -22,5 +22,6 @@
 
     <ItemGroup>
       <Folder Include="Assets\Fonts\" />
+      <Folder Include="Assets\SocialNetworks\" />
     </ItemGroup>
 </Project>

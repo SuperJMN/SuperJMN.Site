@@ -11,7 +11,7 @@
         <viewModels:MainViewModel />
     </Design.DataContext>
 
-    <views:Section Title="My work" HorizontalAlignment="Center">
+    <views:Section Title="My work" TitleAlignment="Center">
         <ItemsControl ItemsSource="{Binding Works}">
             <ItemsControl.ItemsPanel>
                 <ItemsPanelTemplate>

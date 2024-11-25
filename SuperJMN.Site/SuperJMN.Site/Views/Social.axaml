@@ -1,0 +1,34 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:viewModels="clr-namespace:SuperJMN.Site.ViewModels"
+             mc:Ignorable="d" 
+             x:Class="SuperJMN.Site.Views.Social" x:DataType="viewModels:MainViewModel">
+    
+    <Design.DataContext>
+        <viewModels:MainViewModel />
+    </Design.DataContext>
+    
+    <UserControl.DataTemplates>
+        <DataTemplate DataType="Bitmap">
+            <Image RenderOptions.BitmapInterpolationMode="HighQuality" Source="{Binding}" />
+        </DataTemplate>
+    </UserControl.DataTemplates>
+    
+    <ItemsControl ItemsSource="{Binding  SocialNetworks}">
+        <ItemsControl.ItemsPanel>
+            <ItemsPanelTemplate>
+                <WrapPanel ItemWidth="80" ItemHeight="86" />
+            </ItemsPanelTemplate>
+        </ItemsControl.ItemsPanel>
+        <ItemsControl.ItemTemplate>
+            <DataTemplate>
+                <HyperlinkButton NavigateUri="{Binding Link}">
+                    <ContentControl Content="{Binding Icon}" />
+                </HyperlinkButton>
+            </DataTemplate>
+        </ItemsControl.ItemTemplate>
+    </ItemsControl>
+
+</UserControl>

@@ -49,7 +49,7 @@
                                     <Run Text="{Binding YearEnd}" />
                                 </TextBlock.Inlines>
                             </TextBlock>
-                            <TextBlock FontSize="16" Foreground="{StaticResource AlmostBlackClearer}" Text="{Binding Description}" />
+                            <TextBlock FontSize="16" TextWrapping="Wrap" Foreground="{StaticResource AlmostBlackClearer}" Text="{Binding Description}" />
                         </StackPanel>
                     </DockPanel>
                 </DataTemplate>

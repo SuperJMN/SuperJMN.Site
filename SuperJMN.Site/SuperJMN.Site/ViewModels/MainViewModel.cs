@@ -109,13 +109,13 @@ public class MainViewModel : ViewModelBase
             {
                 Name = "Wasabi Wallet",
                 Site = new Uri("https://wasabiwallet.io"),
-                Snapshot =ImageHelper.LoadFromResource( new Uri("avares://SuperJMN.Site/Assets/Works/Wasabi.jpg")),
+                Snapshot = ImageHelper.LoadFromResource(new Uri("avares://SuperJMN.Site/Assets/Works/Wasabi.jpg")),
             },
             new Work
             {
                 Name = "Deployer",
                 Site = new Uri("https://github.com/SuperJMN/Deployer"),
-                Snapshot = ImageHelper.LoadFromResource(new Uri("avares://SuperJMN.Site/Assets/Works/Deployer.jpg")),
+                Snapshot = ImageHelper.LoadFromResource(new Uri("avares://SuperJMN.Site/Assets/Works/Deployer.png")),
             },
             new Work
             {
@@ -123,12 +123,36 @@ public class MainViewModel : ViewModelBase
                 Site = new Uri("https://github.com/SuperJMN-Zafiro/Zafiro"),
                 Snapshot = ImageHelper.LoadFromResource(new Uri("avares://SuperJMN.Site/Assets/Works/Zafiro.jpg")),
             }
+        ];
+
+        SocialNetworks =
+        [
+            new Social
+            {
+                Name = "Github",
+                Link = new Uri("https://github.com/SuperJMN/SuperJMN"),
+                Icon = ImageHelper.LoadFromResource(new Uri("avares://SuperJMN.Site/Assets/SocialNetworks/GitHub.png"))
+            },
+            new Social
+            {
+                Name = "LinkedIn",
+                Link = new Uri("https://linkedin.com/SuperJMN"),
+                Icon = ImageHelper.LoadFromResource(new Uri("avares://SuperJMN.Site/Assets/SocialNetworks/LinkedIn.png"))
+            }
+            ,            new Social
+            {
+                Name = "X",
+                Link = new Uri("https://x.com/SuperJMN"),
+                Icon = ImageHelper.LoadFromResource(new Uri("avares://SuperJMN.Site/Assets/SocialNetworks/X.png"))
+            }
 
         ];
     }
 
-    public IEnumerable<Skill> Skills { get; set; }
-    public IEnumerable<Experience> Experiences { get; set; }
+    public IEnumerable<Social> SocialNetworks { get; }
+
+    public IEnumerable<Skill> Skills { get; }
+    public IEnumerable<Experience> Experiences { get; }
     public IEnumerable<Work> Works { get; }
 }
 
@@ -142,7 +166,7 @@ public class Work
 public class Social
 {
     public string Name { get; set; }
-    public Uri Icon { get; set; }
+    public object Icon { get; set; }
     public Uri Link { get; set; }
 }
 

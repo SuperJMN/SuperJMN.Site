@@ -4,7 +4,7 @@
 
     <Design.PreviewWith>
         <Border Width="400" Height="400">
-            <views:Section Title="Section">
+            <views:Section Title="Section" TitleAlignment="Center">
                 <Button>hi</Button>
             </views:Section>
         </Border>
@@ -14,14 +14,10 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="views:Section">
-                    <HeaderedContentControl Header="{TemplateBinding Title}">
-                        <HeaderedContentControl.HeaderTemplate>
-                            <DataTemplate DataType="x:String">
-                                <TextBlock HorizontalAlignment="{TemplateBinding HorizontalAlignment}" Margin="0 0 0 20" Classes="Section" Text="{Binding}" />
-                            </DataTemplate>
-                        </HeaderedContentControl.HeaderTemplate>
-                        <ContentControl Content="{TemplateBinding Content}" />
-                    </HeaderedContentControl>
+                    <StackPanel>
+                        <TextBlock HorizontalAlignment="Stretch" TextAlignment="{TemplateBinding TitleAlignment}" Margin="0 0 0 20" Classes="Section" Text="{TemplateBinding Title}" />
+                        <ContentPresenter Content="{TemplateBinding Content}" />
+                    </StackPanel>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
