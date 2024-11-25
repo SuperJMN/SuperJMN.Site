@@ -13,10 +13,10 @@
         <vm:MainViewModel />
     </Design.DataContext>
 
-    <ScrollViewer VerticalScrollBarVisibility="Auto">
+    <ScrollViewer VerticalScrollBarVisibility="Auto" x:Name="ScrollViewer">
         <StackPanel Spacing="50">
             <views:Header Height="600" />
-            <views:ThisIsMe Margin="100" HorizontalAlignment="Center" />
+            <views:ThisIsMe HorizontalAlignment="Center" />
             <WrapPanel ItemWidth="550" HorizontalAlignment="Center" >
                 <views:Experience Margin="50 0" />
                 <views:Skills Margin="50 0" />
