@@ -4,13 +4,36 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d" d:DesignWidth="1200"
              x:Class="SuperJMN.Site.Views.ThisIsMe">
-    <WrapPanel ItemWidth="500" HorizontalAlignment="Center">
+    
+    <UserControl.Resources>
+        <SolidColorBrush x:Key="HyperlinkButtonBackgroundPointerOver" Color="Gray" />
+        <SolidColorBrush x:Key="HyperlinkButtonForeground" Color="Black" />
+        <SolidColorBrush x:Key="HyperlinkButtonForegroundPointerOver" Color="White" />
+        <SolidColorBrush x:Key="HyperlinkButtonBackground" Color="White" />
+        <SolidColorBrush x:Key="HyperlinkButtonBorderBrushPressed" Color="Black" />
+        <SolidColorBrush x:Key="HyperlinkButtonBorderBrushPointerOver" Color="Black" />
+        <SolidColorBrush x:Key="HyperlinkButtonBackgroundPressed" Color="Gray" />
+        <SolidColorBrush x:Key="HyperlinkButtonForegroundPressed" Color="White" />
+        
+        <ControlTheme x:Key="GitHubButton" TargetType="HyperlinkButton" BasedOn="{StaticResource {x:Type HyperlinkButton}}">
+            <Setter Property="CornerRadius" Value="0" />
+            <Setter Property="FontSize" Value="18" />
+            <Setter Property="BorderThickness" Value="2" />
+            <Setter Property="BorderBrush" Value="Black" />
+            <Setter Property="TextBlock.TextDecorations" Value="{x:Null}" />
+            <Setter Property="FontWeight" Value="Bold" />
+            <Setter Property="Padding" Value="15 10" />
+        </ControlTheme>
+        
+    </UserControl.Resources>
+    
+    <WrapPanel ItemWidth="500">
         <StackPanel Margin="10">
             <TextBlock FontSize="40" FontWeight="Black" Foreground="#6F6F6F">THIS IS ME</TextBlock>
             <TextBlock Foreground="#6F6F6F" TextWrapping="Wrap" FontSize="16" Margin="0 20">
                 Hi, thank You for taking a look around my site. If you have any questions feel free to reach out on
             </TextBlock>
-            <Button FontSize="18" Background="Transparent" BorderBrush="Black" BorderThickness="2" FontWeight="Bold" CornerRadius="0" Padding="10" Content="SEE MY GITHUB PROFILE" Margin="0 40" />
+            <HyperlinkButton Theme="{StaticResource GitHubButton}" NavigateUri="https://www.github.com/SuperJMN" Content="SEE MY GITHUB PROFILE" Margin="0 40" />
         </StackPanel>
         <Image Width="400" Stretch="Uniform" Source="/Assets/profile.jpg" Margin="20" />
     </WrapPanel>
