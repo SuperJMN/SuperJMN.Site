@@ -1,14 +1,12 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using Avalonia.Media.Imaging;
 
 namespace SuperJMN.Site.ViewModels;
 
 public class MainViewModel : ViewModelBase
 {
-#pragma warning disable CA1822 // Mark members as static
-    public string Greeting => "Welcome to Avalonia!";
-#pragma warning restore CA1822 // Mark members as static
-
     public MainViewModel()
     {
         Skills =
@@ -103,12 +101,49 @@ public class MainViewModel : ViewModelBase
                 YearStart = 2011,
                 YearEnd = 2012,
             },
+        ];
+
+        Works =
+        [
+            new Work
+            {
+                Name = "Wasabi Wallet",
+                Site = new Uri("https://wasabiwallet.io"),
+                Snapshot =ImageHelper.LoadFromResource( new Uri("avares://SuperJMN.Site/Assets/Works/Wasabi.jpg")),
+            },
+            new Work
+            {
+                Name = "Deployer",
+                Site = new Uri("https://github.com/SuperJMN/Deployer"),
+                Snapshot = ImageHelper.LoadFromResource(new Uri("avares://SuperJMN.Site/Assets/Works/Deployer.jpg")),
+            },
+            new Work
+            {
+                Name = "Zafiro Toolkit",
+                Site = new Uri("https://github.com/SuperJMN-Zafiro/Zafiro"),
+                Snapshot = ImageHelper.LoadFromResource(new Uri("avares://SuperJMN.Site/Assets/Works/Zafiro.jpg")),
+            }
 
         ];
     }
 
     public IEnumerable<Skill> Skills { get; set; }
     public IEnumerable<Experience> Experiences { get; set; }
+    public IEnumerable<Work> Works { get; }
+}
+
+public class Work
+{
+    public string Name { get; set; }
+    public Bitmap Snapshot { get; set; }
+    public Uri Site { get; set; }
+}
+
+public class Social
+{
+    public string Name { get; set; }
+    public Uri Icon { get; set; }
+    public Uri Link { get; set; }
 }
 
 public class Experience
