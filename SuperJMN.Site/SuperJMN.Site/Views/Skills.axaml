@@ -20,7 +20,7 @@
             <ItemsControl.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Spacing="5" Margin="0 20">
-                        <TextBlock FontSize="16" FontWeight="Black" Text="{Binding Name}" />
+                        <TextBlock FontSize="16" FontWeight="Black" Text="{Binding Name}" TextWrapping="Wrap" />
                         <Border BorderThickness="2" BorderBrush="{StaticResource AlmostBlack}" Padding="2" CornerRadius="15">
                             <ProgressBar Value="{Binding Percent}" Background="Transparent" Foreground="{StaticResource AlmostBlack}" Height="12" CornerRadius="10" />
                         </Border>
