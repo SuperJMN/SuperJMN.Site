@@ -4,7 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:viewModels="clr-namespace:SuperJMN.Site.ViewModels"
              xmlns:views="clr-namespace:SuperJMN.Site.Views"
-             mc:Ignorable="d" d:DesignWidth="1200" d:DesignHeight="450"
+             mc:Ignorable="d" d:DesignWidth="1200"
              x:Class="SuperJMN.Site.Views.MyWork" x:DataType="viewModels:MainViewModel">
 
     <Design.DataContext>
@@ -20,8 +20,8 @@
             </ItemsControl.ItemsPanel>
             <ItemsControl.ItemTemplate>
                 <DataTemplate>
-                    <Border BoxShadow="5 5 30 Gray" ClipToBounds="False" Margin="20" Padding="15" CornerRadius="10">
-                        <HyperlinkButton NavigateUri="{Binding Site}">
+                    <Border BoxShadow="5 5 30 Gray" ClipToBounds="False" Margin="20" Padding="15" CornerRadius="10" VerticalAlignment="Stretch">
+                        <HyperlinkButton NavigateUri="{Binding Site}" VerticalAlignment="Stretch">
                             <DockPanel>
                                 <TextBlock TextDecorations="{x:Null}" Classes="Title" DockPanel.Dock="Top" Text="{Binding Name}" TextAlignment="Center" />
                                 <TextBlock DockPanel.Dock="Bottom" Text="{Binding Site}" />
