@@ -6,12 +6,16 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperJMN.Site.Desktop", "Su
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperJMN.Site.Browser", "SuperJMN.Site\SuperJMN.Site.Browser\SuperJMN.Site.Browser.csproj", "{613B0172-B474-4D50-9319-B8C89CDEF69A}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "_build", "build\_build.csproj", "{069C8372-7079-4681-B223-1FA86F411BDD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{069C8372-7079-4681-B223-1FA86F411BDD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{069C8372-7079-4681-B223-1FA86F411BDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F62290CA-D336-40D3-9B78-B9170DEA67F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{F62290CA-D336-40D3-9B78-B9170DEA67F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F62290CA-D336-40D3-9B78-B9170DEA67F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
