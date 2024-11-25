@@ -6,6 +6,8 @@ using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Input;
 using Avalonia.Interactivity;
+using Avalonia.ReactiveUI;
+using Avalonia.Threading;
 using Avalonia.VisualTree;
 using Avalonia.Xaml.Interactions.Custom;
 using CSharpFunctionalExtensions;
@@ -70,7 +72,8 @@ public class ScrollToTargetBehavior : AttachedToVisualTreeBehavior<InputElement>
             return;
         }
 
+        var currentOffset = scrollViewer.Offset.Y;
         var targetRectInScrollViewer = transform.Value.Transform(targetBounds.TopLeft);
-        scrollViewer.Offset = new Vector(scrollViewer.Offset.X, targetRectInScrollViewer.Y + scrollViewer.Offset.Y);
+        scrollViewer.Offset = new Vector(scrollViewer.Offset.X, targetRectInScrollViewer.Y + currentOffset);
     }
 }

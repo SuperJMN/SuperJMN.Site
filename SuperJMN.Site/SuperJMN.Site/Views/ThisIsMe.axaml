@@ -7,17 +7,16 @@
              x:Class="SuperJMN.Site.Views.ThisIsMe">
     
     <UserControl.Resources>
-        <SolidColorBrush x:Key="HyperlinkButtonBackgroundPointerOver" Color="Gray" />
-        <SolidColorBrush x:Key="HyperlinkButtonForeground" Color="Black" />
-        <SolidColorBrush x:Key="HyperlinkButtonForegroundPointerOver" Color="White" />
-        <SolidColorBrush x:Key="HyperlinkButtonBackground" Color="White" />
-        <SolidColorBrush x:Key="HyperlinkButtonBorderBrushPressed" Color="Black" />
-        <SolidColorBrush x:Key="HyperlinkButtonBorderBrushPointerOver" Color="Black" />
-        <SolidColorBrush x:Key="HyperlinkButtonBackgroundPressed" Color="Gray" />
-        <SolidColorBrush x:Key="HyperlinkButtonForegroundPressed" Color="White" />
+        <!-- <SolidColorBrush x:Key="HyperlinkButtonBackgroundPointerOver" Color="Gray" /> -->
+        <!-- <SolidColorBrush x:Key="HyperlinkButtonForeground" Color="Black" /> -->
+        <!-- <SolidColorBrush x:Key="HyperlinkButtonForegroundPointerOver" Color="White" /> -->
+        <!-- <SolidColorBrush x:Key="HyperlinkButtonBackground" Color="White" /> -->
+        <!-- <SolidColorBrush x:Key="HyperlinkButtonBorderBrushPressed" Color="Black" /> -->
+        <!-- <SolidColorBrush x:Key="HyperlinkButtonBorderBrushPointerOver" Color="Black" /> -->
+        <!-- <SolidColorBrush x:Key="HyperlinkButtonBackgroundPressed" Color="Gray" /> -->
+        <!-- <SolidColorBrush x:Key="HyperlinkButtonForegroundPressed" Color="White" /> -->
         
         <ControlTheme x:Key="GitHubButton" TargetType="HyperlinkButton" BasedOn="{StaticResource {x:Type HyperlinkButton}}">
-            <ControlTheme.Resources></ControlTheme.Resources>
             <Setter Property="CornerRadius" Value="0" />
             <Setter Property="FontSize" Value="18" />
             <Setter Property="BorderThickness" Value="2" />
@@ -25,7 +24,33 @@
             <Setter Property="TextBlock.TextDecorations" Value="{x:Null}" />
             <Setter Property="FontWeight" Value="Bold" />
             <Setter Property="Padding" Value="15 10" />
+            <Setter Property="Foreground" Value="Black" />
+            <Style Selector="^:pointerover /template/ ContentPresenter#PART_ContentPresenter">
+                <Setter Property="Foreground" Value="Black" />
+                <Setter Property="BorderBrush" Value="Black" />
+                <Setter Property="Background" Value="White" />
+            </Style>
+            <Style Selector="^:pointerover /template/ ContentPresenter#PART_ContentPresenter">
+                <Setter Property="Foreground" Value="White" />
+                <Setter Property="BorderBrush" Value="Black" />
+                <Setter Property="Background" Value="{StaticResource AlmostBlackClearer}" />
+            </Style>
         </ControlTheme>
+        
+        <ControlTheme x:Key="ContactMe" TargetType="HyperlinkButton" BasedOn="{StaticResource {x:Type HyperlinkButton}}">
+            <Setter Property="CornerRadius" Value="0" />
+            <Setter Property="BorderThickness" Value="0" />
+            <Setter Property="Padding" Value="0" />
+            <Style Selector="^:pointerover /template/ ContentPresenter#PART_ContentPresenter">
+                <Setter Property="Foreground" Value="Black" />
+                <Setter Property="BorderBrush" Value="Black" />
+                <Setter Property="Background" Value="White" />
+            </Style>
+            <Style Selector="^:pointerover /template/ ContentPresenter#PART_ContentPresenter">
+                <Setter Property="Background" Value="Transparent" />
+            </Style>
+        </ControlTheme>
+
         
     </UserControl.Resources>
     
@@ -36,7 +61,7 @@
                 <TextBlock.Inlines>
                     <Run>Hi, thank You for taking a look around my site. If you have any questions feel free to reach out on</Run>
                     <InlineUIContainer>
-                        <HyperlinkButton VerticalAlignment="Center" Content="Github, LinkedIn or X">
+                        <HyperlinkButton Theme="{StaticResource ContactMe}" VerticalAlignment="Center" Content="Github, LinkedIn or X">
                             <Interaction.Behaviors>
                                 <viewModels:ScrollToTargetBehavior TargetId="Experience" />
                             </Interaction.Behaviors>
