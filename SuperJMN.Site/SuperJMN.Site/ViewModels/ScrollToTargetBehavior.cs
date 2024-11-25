@@ -18,10 +18,17 @@ public class ScrollToTargetBehavior : AttachedToVisualTreeBehavior<InputElement>
     public static readonly AttachedProperty<string> TargetIdProperty =
         AvaloniaProperty.RegisterAttached<ScrollToTargetBehavior, AvaloniaObject, string>("TargetId");
 
-    public static void SetTargetId(AvaloniaObject obj, string value) => obj.SetValue(TargetIdProperty, value);
-    public static string GetTargetId(AvaloniaObject obj) => obj.GetValue(TargetIdProperty);
-
     public string TargetId { get; set; }
+
+    public static void SetTargetId(AvaloniaObject obj, string value)
+    {
+        obj.SetValue(TargetIdProperty, value);
+    }
+
+    public static string GetTargetId(AvaloniaObject obj)
+    {
+        return obj.GetValue(TargetIdProperty);
+    }
 
     protected override void OnAttachedToVisualTree(CompositeDisposable disposable)
     {
@@ -43,7 +50,7 @@ public class ScrollToTargetBehavior : AttachedToVisualTreeBehavior<InputElement>
         base.OnAttached(disposable);
     }
 
-    private Maybe<ScrollViewer> GetScrollViewer(Visual visual)
+    private static Maybe<ScrollViewer> GetScrollViewer(Visual visual)
     {
         return visual.GetVisualAncestors().OfType<ScrollViewer>().TryFirst();
     }
@@ -53,7 +60,7 @@ public class ScrollToTargetBehavior : AttachedToVisualTreeBehavior<InputElement>
         return root.GetVisualDescendants().TryFirst(visual => GetTargetId(visual) == TargetId);
     }
 
-    private void ScrollToTarget(ScrollViewer scrollViewer, Visual target)
+    private static void ScrollToTarget(ScrollViewer scrollViewer, Visual target)
     {
         var targetBounds = target.Bounds;
         var transform = target.TransformToVisual(scrollViewer);
