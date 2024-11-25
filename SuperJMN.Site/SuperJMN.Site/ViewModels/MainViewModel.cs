@@ -136,7 +136,7 @@ public class MainViewModel : ViewModelBase
             new Social
             {
                 Name = "LinkedIn",
-                Link = new Uri("https://linkedin.com/SuperJMN"),
+                Link = new Uri("https://linkedin.com/in/SuperJMN"),
                 Icon = ImageHelper.LoadFromResource(new Uri("avares://SuperJMN.Site/Assets/SocialNetworks/LinkedIn.png"))
             }
             ,            new Social
