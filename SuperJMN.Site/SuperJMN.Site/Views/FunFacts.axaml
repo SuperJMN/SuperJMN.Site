@@ -14,7 +14,7 @@
     <ItemsControl ItemsSource="{Binding FunFacts}">
         <ItemsControl.ItemsPanel>
             <ItemsPanelTemplate>
-                <WrapPanel ItemWidth="200" />
+                <viewModels:MyWrapPanel ItemWidth="200" />
             </ItemsPanelTemplate>
         </ItemsControl.ItemsPanel>
         <ItemsControl.ItemTemplate>

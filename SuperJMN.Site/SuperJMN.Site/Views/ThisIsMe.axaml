@@ -54,7 +54,7 @@
         
     </UserControl.Resources>
     
-    <WrapPanel ItemWidth="450">
+    <viewModels:MyWrapPanel ItemWidth="450">
         <StackPanel Margin="10">
             <TextBlock FontSize="40" FontWeight="Black" Foreground="#6F6F6F">THIS IS ME</TextBlock>
             <TextBlock Foreground="#6F6F6F" TextWrapping="Wrap" FontSize="16" Margin="0 20">
@@ -72,5 +72,5 @@
             <HyperlinkButton Theme="{StaticResource GitHubButton}" NavigateUri="https://www.github.com/SuperJMN" Content="SEE MY GITHUB PROFILE" Margin="0 40" />
         </StackPanel>
         <Image Width="400" Stretch="Uniform" Source="/Assets/profile.jpg" Margin="20" />
-    </WrapPanel>
+    </viewModels:MyWrapPanel>
 </UserControl>

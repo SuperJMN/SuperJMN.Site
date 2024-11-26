@@ -23,10 +23,7 @@
                 </views:Header.Height>
             </views:Header>
             <views:ThisIsMe HorizontalAlignment="Center" />
-            <WrapPanel ItemWidth="550" HorizontalAlignment="Center" >
-                <views:Experience Margin="0 0 20 0" />
-                <views:Skills Margin="0 0 20 0" />
-            </WrapPanel>
+            <views:ExperienceAndSkills />
             <views:FunFacts HorizontalAlignment="Center" />
             <views:MyWork HorizontalAlignment="Center" />
             <views:Social HorizontalAlignment="Center" />

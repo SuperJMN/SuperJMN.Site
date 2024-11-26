@@ -13,7 +13,7 @@
     <ItemsControl ItemsSource="{Binding  SocialNetworks}" viewModels:ScrollToTargetBehavior.TargetId="SocialNetworks">
         <ItemsControl.ItemsPanel>
             <ItemsPanelTemplate>
-                <WrapPanel ItemWidth="80" ItemHeight="86" />
+                <viewModels:MyWrapPanel ItemWidth="80" ItemHeight="86" />
             </ItemsPanelTemplate>
         </ItemsControl.ItemsPanel>
         <ItemsControl.ItemTemplate>

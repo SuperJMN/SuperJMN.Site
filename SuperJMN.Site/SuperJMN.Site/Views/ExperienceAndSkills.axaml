@@ -1,0 +1,18 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:viewModels="clr-namespace:SuperJMN.Site.ViewModels"
+             xmlns:views="clr-namespace:SuperJMN.Site.Views"
+             mc:Ignorable="d" d:DesignWidth="400" d:DesignHeight="350"
+             x:Class="SuperJMN.Site.Views.ExperienceAndSkills">
+    
+    <Design.DataContext>
+        <viewModels:MainViewModel />
+    </Design.DataContext>
+    
+    <viewModels:MyWrapPanel ItemWidth="550" HorizontalAlignment="Center" Margin="10">
+        <views:Experience Margin="10 0 20 0" />
+        <views:Skills Margin="10 0 20 0" />
+    </viewModels:MyWrapPanel>
+</UserControl>

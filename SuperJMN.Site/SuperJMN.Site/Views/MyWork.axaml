@@ -15,7 +15,7 @@
         <ItemsControl ItemsSource="{Binding Works}">
             <ItemsControl.ItemsPanel>
                 <ItemsPanelTemplate>
-                    <WrapPanel ItemWidth="400" />
+                    <viewModels:MyWrapPanel ItemWidth="400" />
                 </ItemsPanelTemplate>
             </ItemsControl.ItemsPanel>
             <ItemsControl.ItemTemplate>
