@@ -14,9 +14,7 @@
     </ItemGroup>
 
     <PropertyGroup>
-        <TrimmerSingleWarn>false</TrimmerSingleWarn>
-        <TrimMode>link</TrimMode>
-        <SuppressTrimAnalysisWarnings>false</SuppressTrimAnalysisWarnings>
+        <PublishTrimmed>false</PublishTrimmed>
     </PropertyGroup>
-
+    
 </Project>
