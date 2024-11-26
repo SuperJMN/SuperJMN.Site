@@ -27,6 +27,7 @@
                 <views:Experience Margin="0 0 20 0" />
                 <views:Skills Margin="0 0 20 0" />
             </WrapPanel>
+            <views:FunFacts HorizontalAlignment="Center" />
             <views:MyWork HorizontalAlignment="Center" />
             <views:Social HorizontalAlignment="Center" />
         </StackPanel>

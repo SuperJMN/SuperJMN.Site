@@ -3,26 +3,30 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:viewModels="clr-namespace:SuperJMN.Site.ViewModels"
-             mc:Ignorable="d" 
-             x:Class="SuperJMN.Site.Views.Social" x:DataType="viewModels:MainViewModel">
+             xmlns:views="clr-namespace:SuperJMN.Site.Views"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="SuperJMN.Site.Views.FunFacts" x:DataType="viewModels:MainViewModel">
     
     <Design.DataContext>
         <viewModels:MainViewModel />
     </Design.DataContext>
-    
-    <ItemsControl ItemsSource="{Binding  SocialNetworks}" viewModels:ScrollToTargetBehavior.TargetId="SocialNetworks">
+
+    <ItemsControl ItemsSource="{Binding FunFacts}">
         <ItemsControl.ItemsPanel>
             <ItemsPanelTemplate>
-                <WrapPanel ItemWidth="80" ItemHeight="86" />
+                <WrapPanel ItemWidth="200" />
             </ItemsPanelTemplate>
         </ItemsControl.ItemsPanel>
         <ItemsControl.ItemTemplate>
             <DataTemplate>
-                <HyperlinkButton NavigateUri="{Binding Link}">
-                    <ContentControl Content="{Binding Icon}" />
-                </HyperlinkButton>
+                <DockPanel>
+                    <TextBlock DockPanel.Dock="Bottom" Text="{Binding Description}" TextAlignment="Center" />
+                    <TextBlock Margin="5" Classes="Title" DockPanel.Dock="Bottom" Text="{Binding Value}" TextAlignment="Center" />
+                    <ContentControl Margin="5" Content="{Binding Icon}" Width="80" Height="80" />
+                </DockPanel>
             </DataTemplate>
         </ItemsControl.ItemTemplate>
     </ItemsControl>
 
+    
 </UserControl>

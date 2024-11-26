@@ -147,13 +147,50 @@ public class MainViewModel : ViewModelBase
             }
 
         ];
+        
+        FunFacts =
+        [
+            new FunFact
+            {
+                Description = "Github Repos",
+                Value = 141,
+                Icon = ImageHelper.LoadFromResource(new Uri("avares://SuperJMN.Site/Assets/SocialNetworks/GitHub.png"))
+            },
+            new FunFact
+            {
+                Description = "Github Stars gathered",
+                Value = 247,
+                Icon = ImageHelper.LoadFromResource(new Uri("avares://SuperJMN.Site/Assets/Numbers/GitHubStar.png"))
+            },
+            new FunFact
+            {
+                Description = "Precious wife",
+                Value = 1,
+                Icon = ImageHelper.LoadFromResource(new Uri("avares://SuperJMN.Site/Assets/Numbers/Wife.png"))
+            },
+            new FunFact
+            {
+                Description = "Precious child",
+                Value = 1,
+                Icon = ImageHelper.LoadFromResource(new Uri("avares://SuperJMN.Site/Assets/Numbers/Child.png"))
+            }
+        ];
     }
+
+    public IEnumerable<FunFact> FunFacts { get; set; }
 
     public IEnumerable<Social> SocialNetworks { get; }
 
     public IEnumerable<Skill> Skills { get; }
     public IEnumerable<Experience> Experiences { get; }
     public IEnumerable<Work> Works { get; }
+}
+
+public class FunFact
+{
+    public Bitmap Icon { get; set; }
+    public int Value { get; set; }
+    public string Description { get; set; }
 }
 
 public class Work
