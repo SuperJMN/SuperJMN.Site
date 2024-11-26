@@ -4,15 +4,40 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:viewModels="clr-namespace:SuperJMN.Site.ViewModels"
              xmlns:views="clr-namespace:SuperJMN.Site.Views"
-             mc:Ignorable="d" d:DesignWidth="400" d:DesignHeight="350"
+             mc:Ignorable="d" d:DesignWidth="700" 
              x:Class="SuperJMN.Site.Views.ExperienceAndSkills">
-    
+
     <Design.DataContext>
         <viewModels:MainViewModel />
     </Design.DataContext>
-    
-    <viewModels:MyWrapPanel ItemWidth="550" HorizontalAlignment="Center" Margin="10">
+
+    <viewModels:MyWrapPanel HorizontalAlignment="Center" Margin="10">
         <views:Experience Margin="10 0 20 0" />
         <views:Skills Margin="10 0 20 0" />
+
+        <Interaction.Behaviors>
+            <AdaptiveBehavior SourceControl="{Binding $parent[TopLevel]}">
+                <AdaptiveClassSetter MinWidth="0" MinWidthOperator="GreaterThanOrEqual" MaxWidth="400" MaxWidthOperator="LessThan" ClassName="small" />
+                <AdaptiveClassSetter MinWidth="400" MinWidthOperator="GreaterThanOrEqual" MaxWidth="700" MaxWidthOperator="LessThan" ClassName="medium" />
+                <AdaptiveClassSetter MinWidth="700" MinWidthOperator="GreaterThanOrEqual" MaxWidth="900" MaxWidthOperator="LessThan" ClassName="large" />
+                <AdaptiveClassSetter MinWidth="900" MinWidthOperator="GreaterThanOrEqual" MaxWidth="Infinity" MaxWidthOperator="LessThan" ClassName="wide" />
+            </AdaptiveBehavior>
+        </Interaction.Behaviors>
+
+        <viewModels:MyWrapPanel.Styles>
+            <Style Selector="viewModels|MyWrapPanel.small">
+                <Setter Property="ItemWidth" Value="300" />
+            </Style>
+            <Style Selector="viewModels|MyWrapPanel.medium">
+                <Setter Property="ItemWidth" Value="400" />
+            </Style>
+            <Style Selector="viewModels|MyWrapPanel.large">
+                <Setter Property="ItemWidth" Value="650" />
+            </Style>
+            <Style Selector="viewModels|MyWrapPanel.wide">
+                <Setter Property="ItemWidth" Value="550" />
+            </Style>
+        </viewModels:MyWrapPanel.Styles>
+
     </viewModels:MyWrapPanel>
 </UserControl>
