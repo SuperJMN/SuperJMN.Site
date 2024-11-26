@@ -130,7 +130,7 @@ public class MainViewModel : ViewModelBase
             new Social
             {
                 Name = "Github",
-                Link = new Uri("https://github.com/SuperJMN/SuperJMN"),
+                Link = new Uri("https://github.com/SuperJMN"),
                 Icon = ImageHelper.LoadFromResource(new Uri("avares://SuperJMN.Site/Assets/SocialNetworks/GitHub.png"))
             },
             new Social
