@@ -12,7 +12,7 @@
         </Grid.Background>
         <StackPanel Grid.Column="1" Grid.ColumnSpan="2" VerticalAlignment="Center">
             <TextBlock TextWrapping="Wrap" Text="I'm José Manuel Nieto" FontSize="60" />
-            <TextBlock Text="Open source contributor" FontSize="40" />
+            <TextBlock TextWrapping="Wrap" Text="Open source contributor" FontSize="40" />
         </StackPanel>
     </Grid>
 
