@@ -63,7 +63,7 @@
                     <InlineUIContainer>
                         <HyperlinkButton Theme="{StaticResource ContactMe}" VerticalAlignment="Center" Content="Github, LinkedIn or X">
                             <Interaction.Behaviors>
-                                <viewModels:ScrollToTargetBehavior TargetId="Experience" />
+                                <viewModels:ScrollToTargetBehavior TargetId="SocialNetworks" />
                             </Interaction.Behaviors>
                         </HyperlinkButton>
                     </InlineUIContainer>
