@@ -1,9 +1,9 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using Avalonia.Media.Imaging;
+using SuperJMN.Site.ViewModels;
 
-namespace SuperJMN.Site.ViewModels;
+namespace SuperJMN.Site.Sections.Main;
 
 public class MainViewModel : ViewModelBase
 {

@@ -1,8 +1,6 @@
-using Avalonia;
 using Avalonia.Controls;
-using Avalonia.Markup.Xaml;
 
-namespace SuperJMN.Site.Views;
+namespace SuperJMN.Site.Sections.Main.Parts;
 
 public partial class FunFacts : UserControl
 {

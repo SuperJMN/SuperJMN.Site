@@ -5,29 +5,31 @@
              xmlns:vm="clr-namespace:SuperJMN.Site.ViewModels"
              xmlns:views="clr-namespace:SuperJMN.Site.Views"
              xmlns:site="clr-namespace:SuperJMN.Site"
+             xmlns:main="clr-namespace:SuperJMN.Site.Sections.Main"
+             xmlns:parts="clr-namespace:SuperJMN.Site.Sections.Main.Parts"
              mc:Ignorable="d" d:DesignWidth="1400"
-             x:Class="SuperJMN.Site.Views.MainView"
+             x:Class="SuperJMN.Site.Sections.Main.MainView"
              Background="White"
-             x:DataType="vm:MainViewModel">
+             x:DataType="main:MainViewModel">
     <Design.DataContext>
-        <vm:MainViewModel />
+        <main:MainViewModel />
     </Design.DataContext>
 
     <ScrollViewer VerticalScrollBarVisibility="Auto" x:Name="ScrollViewer">
         <StackPanel Spacing="50">
-            <views:Header>
-                <views:Header.Height>
+            <parts:Header>
+                <parts:Header.Height>
                     <MultiBinding Converter="{x:Static site:HeaderHeightConverter.Instance}">
                         <Binding Path="#ScrollViewer.Offset.Y" />
                         <Binding Path="#ScrollViewer.Bounds.Height" />
                     </MultiBinding>
-                </views:Header.Height>
-            </views:Header>
-            <views:ThisIsMe HorizontalAlignment="Center" />
-            <views:ExperienceAndSkills />
-            <views:FunFacts HorizontalAlignment="Center" />
-            <views:MyWork HorizontalAlignment="Center" />
-            <views:Social HorizontalAlignment="Center" />
+                </parts:Header.Height>
+            </parts:Header>
+            <parts:ThisIsMe HorizontalAlignment="Center" />
+            <parts:ExperienceAndSkills />
+            <parts:FunFacts HorizontalAlignment="Center" />
+            <parts:MyWork HorizontalAlignment="Center" />
+            <parts:Social HorizontalAlignment="Center" />
         </StackPanel>
     </ScrollViewer>
 </UserControl>

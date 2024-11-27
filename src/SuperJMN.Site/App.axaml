@@ -22,7 +22,7 @@
             <SolidColorBrush x:Key="AlmostBlackClearer" Color="#6F6F6F" />
             
             <ResourceDictionary.MergedDictionaries>
-                <MergeResourceInclude Source="Views/Section.axaml" />
+                <MergeResourceInclude Source="Sections/Main/Section.axaml" />
             </ResourceDictionary.MergedDictionaries>
             
         </ResourceDictionary>

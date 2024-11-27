@@ -4,11 +4,12 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:viewModels="clr-namespace:SuperJMN.Site.ViewModels"
              xmlns:views="clr-namespace:SuperJMN.Site.Views"
+             xmlns:main="clr-namespace:SuperJMN.Site.Sections.Main"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-             x:Class="SuperJMN.Site.Views.FunFacts" x:DataType="viewModels:MainViewModel">
+             x:Class="SuperJMN.Site.Sections.Main.Parts.FunFacts" x:DataType="main:MainViewModel">
     
     <Design.DataContext>
-        <viewModels:MainViewModel />
+        <main:MainViewModel />
     </Design.DataContext>
 
     <ItemsControl ItemsSource="{Binding FunFacts}">

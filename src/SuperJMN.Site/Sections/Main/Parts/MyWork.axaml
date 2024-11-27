@@ -4,14 +4,15 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:viewModels="clr-namespace:SuperJMN.Site.ViewModels"
              xmlns:views="clr-namespace:SuperJMN.Site.Views"
+             xmlns:main="clr-namespace:SuperJMN.Site.Sections.Main"
              mc:Ignorable="d" d:DesignWidth="1200"
-             x:Class="SuperJMN.Site.Views.MyWork" x:DataType="viewModels:MainViewModel">
+             x:Class="SuperJMN.Site.Sections.Main.Parts.MyWork" x:DataType="main:MainViewModel">
 
     <Design.DataContext>
-        <viewModels:MainViewModel />
+        <main:MainViewModel />
     </Design.DataContext>
 
-    <views:Section Title="My work" TitleAlignment="Center">
+    <main:Section Title="My work" TitleAlignment="Center">
         <ItemsControl ItemsSource="{Binding Works}">
             <ItemsControl.ItemsPanel>
                 <ItemsPanelTemplate>
@@ -32,5 +33,5 @@
                 </DataTemplate>
             </ItemsControl.ItemTemplate>
         </ItemsControl>
-    </views:Section>
+    </main:Section>
 </UserControl>

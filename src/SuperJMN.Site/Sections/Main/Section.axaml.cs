@@ -1,11 +1,9 @@
 using Avalonia;
-using Avalonia.Controls;
 using Avalonia.Controls.Primitives;
-using Avalonia.Markup.Xaml;
 using Avalonia.Media;
 using Avalonia.Metadata;
 
-namespace SuperJMN.Site.Views;
+namespace SuperJMN.Site.Sections.Main;
 
 public partial class Section : TemplatedControl
 {

@@ -16,6 +16,8 @@
         <entry key="SuperJMN.Site/SuperJMN.Site/Views/Skills.axaml" value="SuperJMN.Site/SuperJMN.Site.Desktop/SuperJMN.Site.Desktop.csproj" />
         <entry key="SuperJMN.Site/SuperJMN.Site/Views/Social.axaml" value="SuperJMN.Site/SuperJMN.Site.Desktop/SuperJMN.Site.Desktop.csproj" />
         <entry key="SuperJMN.Site/SuperJMN.Site/Views/ThisIsMe.axaml" value="SuperJMN.Site/SuperJMN.Site.Desktop/SuperJMN.Site.Desktop.csproj" />
+        <entry key="src/SuperJMN.Site/App.axaml" value="src/SuperJMN.Site.Browser/SuperJMN.Site.Browser.csproj" />
+        <entry key="src/SuperJMN.Site/Sections/Main/MainView.axaml" value="src/SuperJMN.Site.Browser/SuperJMN.Site.Browser.csproj" />
       </map>
     </option>
   </component>

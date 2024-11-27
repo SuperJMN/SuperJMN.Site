@@ -3,11 +3,12 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:viewModels="clr-namespace:SuperJMN.Site.ViewModels"
+             xmlns:main="clr-namespace:SuperJMN.Site.Sections.Main"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-             x:Class="SuperJMN.Site.Views.Skills" x:DataType="viewModels:MainViewModel" Foreground="{StaticResource AlmostBlack}">
+             x:Class="SuperJMN.Site.Sections.Main.Parts.Skills" x:DataType="main:MainViewModel" Foreground="{StaticResource AlmostBlack}">
 
     <Design.DataContext>
-        <viewModels:MainViewModel />
+        <main:MainViewModel />
     </Design.DataContext>
 
     <HeaderedContentControl Header="SOME SKILLS">

@@ -4,7 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:viewModels="clr-namespace:SuperJMN.Site.ViewModels"
              mc:Ignorable="d" 
-             x:Class="SuperJMN.Site.Views.ThisIsMe">
+             x:Class="SuperJMN.Site.Sections.Main.Parts.ThisIsMe">
     
     <UserControl.Resources>
         <!-- <SolidColorBrush x:Key="HyperlinkButtonBackgroundPointerOver" Color="Gray" /> -->

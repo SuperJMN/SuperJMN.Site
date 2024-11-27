@@ -1,6 +1,6 @@
 using Avalonia.Controls;
 
-namespace SuperJMN.Site.Views;
+namespace SuperJMN.Site.Sections.Main;
 
 public partial class MainView : UserControl
 {

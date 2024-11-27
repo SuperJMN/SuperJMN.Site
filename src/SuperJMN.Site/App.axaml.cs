@@ -1,6 +1,7 @@
 using Avalonia;
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Markup.Xaml;
+using SuperJMN.Site.Sections.Main;
 using SuperJMN.Site.ViewModels;
 using SuperJMN.Site.Views;
 
