@@ -2,7 +2,6 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             xmlns:site="clr-namespace:SuperJMN.Site"
              xmlns:main="clr-namespace:SuperJMN.Site.Sections.Main"
              xmlns:parts="clr-namespace:SuperJMN.Site.Sections.Main.Parts"
              xmlns:core="clr-namespace:SuperJMN.Site.Core"
@@ -29,6 +28,7 @@
             <parts:FunFacts HorizontalAlignment="Center" />
             <parts:MyWork HorizontalAlignment="Center" />
             <parts:Social HorizontalAlignment="Center" />
+            <TextBlock Margin="10" TextAlignment="Center">José Manuel Nieto © 2024</TextBlock>
         </StackPanel>
     </ScrollViewer>
 </UserControl>

@@ -52,7 +52,7 @@
                 <TextBlock.Inlines>
                     <Run>Hi, thank You for taking a look around my site. If you have any questions feel free to reach out on</Run>
                     <InlineUIContainer>
-                        <HyperlinkButton Theme="{StaticResource ContactMe}" VerticalAlignment="Center" Content="Github, LinkedIn or X">
+                        <HyperlinkButton Theme="{StaticResource ContactMe}" VerticalAlignment="Center" Content="GitHub, LinkedIn or X">
                             <Interaction.Behaviors>
                                 <behaviors:ScrollToTargetBehavior TargetId="SocialNetworks" />
                             </Interaction.Behaviors>
