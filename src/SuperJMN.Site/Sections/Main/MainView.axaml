@@ -2,11 +2,10 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             xmlns:vm="clr-namespace:SuperJMN.Site.ViewModels"
-             xmlns:views="clr-namespace:SuperJMN.Site.Views"
              xmlns:site="clr-namespace:SuperJMN.Site"
              xmlns:main="clr-namespace:SuperJMN.Site.Sections.Main"
              xmlns:parts="clr-namespace:SuperJMN.Site.Sections.Main.Parts"
+             xmlns:core="clr-namespace:SuperJMN.Site.Core"
              mc:Ignorable="d" d:DesignWidth="1400"
              x:Class="SuperJMN.Site.Sections.Main.MainView"
              Background="White"
@@ -19,7 +18,7 @@
         <StackPanel Spacing="50">
             <parts:Header>
                 <parts:Header.Height>
-                    <MultiBinding Converter="{x:Static site:HeaderHeightConverter.Instance}">
+                    <MultiBinding Converter="{x:Static core:HeaderHeightConverter.Instance}">
                         <Binding Path="#ScrollViewer.Offset.Y" />
                         <Binding Path="#ScrollViewer.Bounds.Height" />
                     </MultiBinding>

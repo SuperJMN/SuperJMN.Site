@@ -1,13 +1,13 @@
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:vm="using:SuperJMN.Site.ViewModels"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:views="clr-namespace:SuperJMN.Site.Views"
+        Height="800"
+        Width="600"
         xmlns:main="clr-namespace:SuperJMN.Site.Sections.Main"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-        x:Class="SuperJMN.Site.Views.MainWindow"
+        x:Class="SuperJMN.Site.MainWindow"
         Icon="/Assets/avalonia-logo.ico"
         Title="SuperJMN.Site">
-        <main:MainView />
+    <main:MainView />
 </Window>

@@ -3,9 +3,9 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:viewModels="clr-namespace:SuperJMN.Site.ViewModels"
-             mc:Ignorable="d" 
+             mc:Ignorable="d"
              x:Class="SuperJMN.Site.Sections.Main.Parts.ThisIsMe">
-    
+
     <UserControl.Resources>
         <!-- <SolidColorBrush x:Key="HyperlinkButtonBackgroundPointerOver" Color="Gray" /> -->
         <!-- <SolidColorBrush x:Key="HyperlinkButtonForeground" Color="Black" /> -->
@@ -15,7 +15,7 @@
         <!-- <SolidColorBrush x:Key="HyperlinkButtonBorderBrushPointerOver" Color="Black" /> -->
         <!-- <SolidColorBrush x:Key="HyperlinkButtonBackgroundPressed" Color="Gray" /> -->
         <!-- <SolidColorBrush x:Key="HyperlinkButtonForegroundPressed" Color="White" /> -->
-        
+
         <ControlTheme x:Key="GitHubButton" TargetType="HyperlinkButton" BasedOn="{StaticResource {x:Type HyperlinkButton}}">
             <Setter Property="CornerRadius" Value="0" />
             <Setter Property="FontSize" Value="18" />
@@ -36,7 +36,7 @@
                 <Setter Property="Background" Value="{StaticResource AlmostBlackClearer}" />
             </Style>
         </ControlTheme>
-        
+
         <ControlTheme x:Key="ContactMe" TargetType="HyperlinkButton" BasedOn="{StaticResource {x:Type HyperlinkButton}}">
             <Setter Property="CornerRadius" Value="0" />
             <Setter Property="BorderThickness" Value="0" />
@@ -51,9 +51,9 @@
             </Style>
         </ControlTheme>
 
-        
+
     </UserControl.Resources>
-    
+
     <viewModels:MyWrapPanel ItemWidth="450">
         <StackPanel Margin="10">
             <TextBlock FontSize="40" FontWeight="Black" Foreground="#6F6F6F">THIS IS ME</TextBlock>

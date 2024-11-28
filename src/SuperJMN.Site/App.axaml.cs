@@ -2,12 +2,10 @@ using Avalonia;
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Markup.Xaml;
 using SuperJMN.Site.Sections.Main;
-using SuperJMN.Site.ViewModels;
-using SuperJMN.Site.Views;
 
 namespace SuperJMN.Site;
 
-public partial class App : Application
+public class App : Application
 {
     public override void Initialize()
     {

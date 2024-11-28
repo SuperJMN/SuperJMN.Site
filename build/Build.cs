@@ -10,13 +10,11 @@ using static Nuke.Common.Tools.DotNet.DotNetTasks;
 
 class Build : NukeBuild
 {
-    [Parameter("GitHub Authentication Token")] [Secret] readonly string GitHubApiKey;
     [Parameter] readonly bool Force;
-    [Solution] readonly Solution Solution;
+    [Parameter("GitHub Authentication Token")] [Secret] readonly string GitHubApiKey;
     [GitVersion] readonly GitVersion GitVersion;
     [GitRepository] readonly GitRepository Repository;
-
-    public static int Main() => Execute<Build>(x => x.Publish);
+    [Solution] readonly Solution Solution;
 
     Target RestoreWorkloads => td => td
         .Executes(() =>
@@ -40,4 +38,6 @@ class Build : NukeBuild
 
     Target Publish => td => td
         .DependsOn(PublishSite);
+
+    public static int Main() => Execute<Build>(x => x.Publish);
 }

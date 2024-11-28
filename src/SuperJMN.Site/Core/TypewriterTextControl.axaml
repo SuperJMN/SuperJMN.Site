@@ -1,0 +1,39 @@
+<ResourceDictionary xmlns="https://github.com/avaloniaui"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:controls="using:SuperJMN.Site"
+                    xmlns:core="clr-namespace:SuperJMN.Site.Core">
+    <Design.PreviewWith>
+        <core:TypewriterControl Width="200" Height="200" FontSize="20" TextWrapping="Wrap" Foreground="Red" CaretBrush="Aquamarine">
+            <core:TypewriterControl.Strings>
+                <core:Strings>
+                    <x:String>VERY LONG SENTENCE</x:String>
+                    <x:String>DEUX</x:String>
+                    <x:String>TROIS</x:String>
+                </core:Strings>
+            </core:TypewriterControl.Strings>
+        </core:TypewriterControl>
+    </Design.PreviewWith>
+
+    <ControlTheme TargetType="core:TypewriterControl" x:Key="{x:Type core:TypewriterControl}">
+        <!-- Set Defaults -->
+        <Setter Property="Template">
+            <ControlTemplate>
+                <TextBlock TextWrapping="{TemplateBinding TextWrapping}">
+                    <TextBlock.Inlines>
+                        <Run DataContext="{Binding $parent[core:TypewriterControl]}">
+                            <Interaction.Behaviors>
+                                <core:CyclingTypewriterBehavior x:DataType="core:TypewriterControl"
+                                                                    InBetweenPause="{Binding InBetweenPause}"
+                                                                    TypingLatency="{Binding TypingLatency}" Strings="{Binding Strings}">
+                                </core:CyclingTypewriterBehavior>
+                            </Interaction.Behaviors>
+                        </Run>
+                        <InlineUIContainer>
+                            <core:CaretControl Width="4" />
+                        </InlineUIContainer>
+                    </TextBlock.Inlines>
+                </TextBlock>
+            </ControlTemplate>
+        </Setter>
+    </ControlTheme>
+</ResourceDictionary>
