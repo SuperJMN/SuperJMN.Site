@@ -9,10 +9,21 @@ using Avalonia.ReactiveUI;
 using Avalonia.Xaml.Interactions.Custom;
 using ReactiveUI;
 
-namespace SuperJMN.Site;
+namespace SuperJMN.Site.Core;
 
 public class TypewriterBehavior : DisposingBehavior<TextBlock>
 {
+    public static readonly StyledProperty<string> TextToTypeProperty = AvaloniaProperty.Register<TypewriterBehavior, string>(
+        nameof(TextToType));
+
+    public string TextToType
+    {
+        get => GetValue(TextToTypeProperty);
+        set => SetValue(TextToTypeProperty, value);
+    }
+
+    public IObservable<Unit> Done { get; }
+
     protected override void OnAttached(CompositeDisposable disposables)
     {
         this.WhenAnyValue(x => x.TextToType)
@@ -40,15 +51,4 @@ public class TypewriterBehavior : DisposingBehavior<TextBlock>
             .Select(i => Observable.Return(text[..^i]).Delay(TimeSpan.FromMilliseconds(50), AvaloniaScheduler.Instance))
             .Concat();
     }
-
-    public static readonly StyledProperty<string> TextToTypeProperty = AvaloniaProperty.Register<TypewriterBehavior, string>(
-        nameof(TextToType));
-
-    public string TextToType
-    {
-        get => GetValue(TextToTypeProperty);
-        set => SetValue(TextToTypeProperty, value);
-    }
-
-    public IObservable<Unit> Done { get; }
 }

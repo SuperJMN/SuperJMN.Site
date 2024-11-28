@@ -17,42 +17,42 @@ public class MainViewModel : ViewModelBase
             new Skill
             {
                 Name = "C#",
-                Percent = 100,
+                Percent = 100
             },
             new Skill
             {
                 Name = "Avalonia",
-                Percent = 93,
+                Percent = 93
             },
             new Skill
             {
                 Name = "Reactive programming",
-                Percent = 95,
+                Percent = 95
             },
             new Skill
             {
                 Name = "Compilers & parsers",
-                Percent = 60,
+                Percent = 60
             },
             new Skill
             {
                 Name = "Kubernetes",
-                Percent = 35,
+                Percent = 35
             },
             new Skill
             {
                 Name = "Perfection seeking",
-                Percent = 86,
+                Percent = 86
             },
             new Skill
             {
                 Name = "Analytical skills",
-                Percent = 90,
+                Percent = 90
             },
             new Skill
             {
                 Name = "Best .NET dev in the world (working hard to it!)",
-                Percent = 65,
+                Percent = 65
             }
         ];
 
@@ -63,14 +63,14 @@ public class MainViewModel : ViewModelBase
                 Name = "Wasabi Wallet",
                 Description = "User interface & Code",
                 YearStart = 2022,
-                YearEnd = 2024,
+                YearEnd = 2024
             },
             new Experience
             {
                 Name = "Fluendo",
                 Description = "Creating the next version of LongoMatch",
                 YearStart = 2021,
-                YearEnd = 2022,
+                YearEnd = 2022
             },
 
             new Experience
@@ -78,7 +78,7 @@ public class MainViewModel : ViewModelBase
                 Name = "Bravent",
                 Description = "Working for companies like Microsoft, Banco Santander, LaLiga, Ibercaja…",
                 YearStart = 2015,
-                YearEnd = 2020,
+                YearEnd = 2020
             },
 
             new Experience
@@ -86,7 +86,7 @@ public class MainViewModel : ViewModelBase
                 Name = "Payvision",
                 Description = "Fraud detection and payment processing.",
                 YearStart = 2014,
-                YearEnd = 2015,
+                YearEnd = 2015
             },
 
             new Experience
@@ -94,7 +94,7 @@ public class MainViewModel : ViewModelBase
                 Name = "DocPath",
                 Description = "Creating DocPath’s Designer, a rich WYSIWYG designer to create documents.",
                 YearStart = 2012,
-                YearEnd = 2014,
+                YearEnd = 2014
             },
 
             new Experience
@@ -102,8 +102,8 @@ public class MainViewModel : ViewModelBase
                 Name = "Quirón Salud",
                 Description = "Building Casiopea application, integral healthcare solution",
                 YearStart = 2011,
-                YearEnd = 2012,
-            },
+                YearEnd = 2012
+            }
         ];
 
         Works =
@@ -112,19 +112,19 @@ public class MainViewModel : ViewModelBase
             {
                 Name = "Wasabi Wallet",
                 Site = new Uri("https://wasabiwallet.io"),
-                Snapshot = ImageHelper.LoadFromResource(new Uri("avares://SuperJMN.Site/Assets/Works/Wasabi.jpg")),
+                Snapshot = ImageHelper.LoadFromResource(new Uri("avares://SuperJMN.Site/Assets/Works/Wasabi.jpg"))
             },
             new Work
             {
                 Name = "Deployer",
                 Site = new Uri("https://github.com/SuperJMN/Deployer"),
-                Snapshot = ImageHelper.LoadFromResource(new Uri("avares://SuperJMN.Site/Assets/Works/Deployer.png")),
+                Snapshot = ImageHelper.LoadFromResource(new Uri("avares://SuperJMN.Site/Assets/Works/Deployer.png"))
             },
             new Work
             {
                 Name = "Zafiro Toolkit",
                 Site = new Uri("https://github.com/SuperJMN-Zafiro/Zafiro"),
-                Snapshot = ImageHelper.LoadFromResource(new Uri("avares://SuperJMN.Site/Assets/Works/Zafiro.jpg")),
+                Snapshot = ImageHelper.LoadFromResource(new Uri("avares://SuperJMN.Site/Assets/Works/Zafiro.jpg"))
             }
         ];
 
@@ -141,16 +141,15 @@ public class MainViewModel : ViewModelBase
                 Name = "LinkedIn",
                 Link = new Uri("https://linkedin.com/in/SuperJMN"),
                 Icon = ImageHelper.LoadFromResource(new Uri("avares://SuperJMN.Site/Assets/SocialNetworks/LinkedIn.png"))
-            }
-            ,            new Social
+            },
+            new Social
             {
                 Name = "X",
                 Link = new Uri("https://x.com/SuperJMN"),
                 Icon = ImageHelper.LoadFromResource(new Uri("avares://SuperJMN.Site/Assets/SocialNetworks/X.png"))
             }
-
         ];
-        
+
         FunFacts =
         [
             new FunFact

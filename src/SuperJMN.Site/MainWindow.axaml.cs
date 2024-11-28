@@ -1,6 +1,6 @@
 using Avalonia.Controls;
 
-namespace SuperJMN.Site.Views;
+namespace SuperJMN.Site;
 
 public partial class MainWindow : Window
 {

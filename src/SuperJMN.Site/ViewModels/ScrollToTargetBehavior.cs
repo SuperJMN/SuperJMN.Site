@@ -4,7 +4,6 @@ using System.Linq;
 using System.Reactive;
 using System.Reactive.Disposables;
 using System.Reactive.Linq;
-using System.Threading.Tasks;
 using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Input;
@@ -23,14 +22,9 @@ public class ScrollToTargetBehavior : AttachedToVisualTreeBehavior<InputElement>
     public static readonly AttachedProperty<string> TargetIdProperty =
         AvaloniaProperty.RegisterAttached<ScrollToTargetBehavior, AvaloniaObject, string>("TargetId");
 
-    public ScrollToTargetBehavior()
-    {
-        
-    }
-    
-    public string TargetId { get; set; }
-
     private SerialDisposable? scrollSubscription;
+
+    public string TargetId { get; set; }
 
     protected override void OnDetaching()
     {
@@ -56,18 +50,18 @@ public class ScrollToTargetBehavior : AttachedToVisualTreeBehavior<InputElement>
             return;
         }
 
-        scrollSubscription = new();
+        scrollSubscription = new SerialDisposable();
 
         AssociatedObject.OnEvent(InputElement.PointerPressedEvent, RoutingStrategies.Tunnel)
             .Do(_ =>
             {
                 var scroller = GetScrollViewer(AssociatedObject)
-                    .Bind(scrollViewer => GetTarget(scrollViewer).Map(target => new{ scrollViewer, visual = target}))
+                    .Bind(scrollViewer => GetTarget(scrollViewer).Map(target => new { scrollViewer, visual = target }))
                     .Map(arg => Scroller(arg.scrollViewer, arg.visual));
-                
+
                 if (scroller.HasValue && scrollSubscription.Disposable == null)
                 {
-                    scrollSubscription.Disposable = scroller.Value.Subscribe(_ => { }, onCompleted: () => scrollSubscription.Disposable = null);
+                    scrollSubscription.Disposable = scroller.Value.Subscribe(_ => { }, () => scrollSubscription.Disposable = null);
                 }
             })
             .Subscribe()
@@ -109,10 +103,8 @@ public class ScrollToTargetBehavior : AttachedToVisualTreeBehavior<InputElement>
         {
             return step;
         }
-        else
-        {
-            return -step;
-        }
+
+        return -step;
     }
 
     private static Maybe<ScrollViewer> GetScrollViewer(Visual visual)

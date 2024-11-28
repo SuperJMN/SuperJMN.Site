@@ -1,7 +1,7 @@
 using System.Linq;
 using Avalonia.Data.Converters;
 
-namespace SuperJMN.Site;
+namespace SuperJMN.Site.Core;
 
 public class HeaderHeightConverter
 {

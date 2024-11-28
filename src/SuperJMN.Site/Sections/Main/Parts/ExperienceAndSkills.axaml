@@ -3,10 +3,9 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:viewModels="clr-namespace:SuperJMN.Site.ViewModels"
-             xmlns:views="clr-namespace:SuperJMN.Site.Views"
              xmlns:main="clr-namespace:SuperJMN.Site.Sections.Main"
              xmlns:parts="clr-namespace:SuperJMN.Site.Sections.Main.Parts"
-             mc:Ignorable="d" d:DesignWidth="700" 
+             mc:Ignorable="d" d:DesignWidth="700"
              x:Class="SuperJMN.Site.Sections.Main.Parts.ExperienceAndSkills">
 
     <Design.DataContext>

@@ -7,49 +7,51 @@
 
     <Application.DataTemplates>
         <local:ViewLocator />
-        
+
         <DataTemplate DataType="Bitmap">
             <Image RenderOptions.BitmapInterpolationMode="HighQuality" Source="{Binding}" />
         </DataTemplate>
-        
+
     </Application.DataTemplates>
 
     <Application.Resources>
-        
+
         <ResourceDictionary>
             <FontFamily x:Key="Rubik">avares://SuperJMN.Site/Assets/Fonts#Rubik</FontFamily>
             <SolidColorBrush x:Key="AlmostBlack" Color="#4D4D4D" />
             <SolidColorBrush x:Key="AlmostBlackClearer" Color="#6F6F6F" />
-            
+
             <ResourceDictionary.MergedDictionaries>
                 <MergeResourceInclude Source="Sections/Main/Section.axaml" />
+                <MergeResourceInclude Source="TypewriterTextControl.axaml" />
+                <MergeResourceInclude Source="CaretControl.axaml" />
             </ResourceDictionary.MergedDictionaries>
-            
+
         </ResourceDictionary>
-        
+
     </Application.Resources>
 
     <Application.Styles>
-        
+
         <FluentTheme />
-        
+
         <Style Selector="TextBlock.Section">
             <Setter Property="FontSize" Value="30" />
             <Setter Property="Foreground" Value="{StaticResource AlmostBlackClearer}" />
             <Setter Property="FontWeight" Value="Black" />
         </Style>
-        
+
         <Style Selector="TextBlock.Title">
             <Setter Property="FontSize" Value="20" />
             <Setter Property="Foreground" Value="{StaticResource AlmostBlackClearer}" />
             <Setter Property="FontWeight" Value="Bold" />
         </Style>
-        
+
         <Style Selector="Button.Hyperlink">
             <Setter Property="Background" Value="Transparent" />
             <Setter Property="BorderThickness" Value="0" />
             <Setter Property="CornerRadius" Value="0" />
         </Style>
-        
+
     </Application.Styles>
 </Application>

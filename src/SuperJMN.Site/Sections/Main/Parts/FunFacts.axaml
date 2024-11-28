@@ -3,11 +3,10 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:viewModels="clr-namespace:SuperJMN.Site.ViewModels"
-             xmlns:views="clr-namespace:SuperJMN.Site.Views"
              xmlns:main="clr-namespace:SuperJMN.Site.Sections.Main"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="SuperJMN.Site.Sections.Main.Parts.FunFacts" x:DataType="main:MainViewModel">
-    
+
     <Design.DataContext>
         <main:MainViewModel />
     </Design.DataContext>
@@ -29,5 +28,5 @@
         </ItemsControl.ItemTemplate>
     </ItemsControl>
 
-    
+
 </UserControl>

@@ -1,11 +1,12 @@
 <Styles xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:controls="using:SuperJMN.Site">
+        xmlns:controls="using:SuperJMN.Site"
+        xmlns:core="clr-namespace:SuperJMN.Site.Core">
     <Design.PreviewWith>
-        <controls:TypewriterBanner />
+        <core:TypewriterBanner />
     </Design.PreviewWith>
 
-    <Style Selector="controls|TypewriterBanner">
+    <Style Selector="core|TypewriterBanner">
         <!-- Set Defaults -->
         <Setter Property="Template">
             <ControlTemplate>

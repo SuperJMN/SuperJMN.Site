@@ -6,8 +6,8 @@
         Width="600"
         xmlns:main="clr-namespace:SuperJMN.Site.Sections.Main"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-        x:Class="SuperJMN.Site.Views.MainWindow"
+        x:Class="SuperJMN.Site.MainWindow"
         Icon="/Assets/avalonia-logo.ico"
         Title="SuperJMN.Site">
-        <main:MainView />
+    <main:MainView />
 </Window>
