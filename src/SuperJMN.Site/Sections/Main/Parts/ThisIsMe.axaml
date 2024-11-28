@@ -2,20 +2,12 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             xmlns:viewModels="clr-namespace:SuperJMN.Site.ViewModels"
+             xmlns:controls="clr-namespace:Zafiro.Avalonia.Controls;assembly=Zafiro.Avalonia"
+             xmlns:behaviors="clr-namespace:Zafiro.Avalonia.Behaviors;assembly=Zafiro.Avalonia"
              mc:Ignorable="d"
              x:Class="SuperJMN.Site.Sections.Main.Parts.ThisIsMe">
 
     <UserControl.Resources>
-        <!-- <SolidColorBrush x:Key="HyperlinkButtonBackgroundPointerOver" Color="Gray" /> -->
-        <!-- <SolidColorBrush x:Key="HyperlinkButtonForeground" Color="Black" /> -->
-        <!-- <SolidColorBrush x:Key="HyperlinkButtonForegroundPointerOver" Color="White" /> -->
-        <!-- <SolidColorBrush x:Key="HyperlinkButtonBackground" Color="White" /> -->
-        <!-- <SolidColorBrush x:Key="HyperlinkButtonBorderBrushPressed" Color="Black" /> -->
-        <!-- <SolidColorBrush x:Key="HyperlinkButtonBorderBrushPointerOver" Color="Black" /> -->
-        <!-- <SolidColorBrush x:Key="HyperlinkButtonBackgroundPressed" Color="Gray" /> -->
-        <!-- <SolidColorBrush x:Key="HyperlinkButtonForegroundPressed" Color="White" /> -->
-
         <ControlTheme x:Key="GitHubButton" TargetType="HyperlinkButton" BasedOn="{StaticResource {x:Type HyperlinkButton}}">
             <Setter Property="CornerRadius" Value="0" />
             <Setter Property="FontSize" Value="18" />
@@ -50,11 +42,10 @@
                 <Setter Property="Background" Value="Transparent" />
             </Style>
         </ControlTheme>
-
-
+        
     </UserControl.Resources>
 
-    <viewModels:MyWrapPanel ItemWidth="450">
+    <controls:WrapPanel ItemWidth="450">
         <StackPanel Margin="10">
             <TextBlock FontSize="40" FontWeight="Black" Foreground="#6F6F6F">THIS IS ME</TextBlock>
             <TextBlock Foreground="#6F6F6F" TextWrapping="Wrap" FontSize="16" Margin="0 20">
@@ -63,7 +54,7 @@
                     <InlineUIContainer>
                         <HyperlinkButton Theme="{StaticResource ContactMe}" VerticalAlignment="Center" Content="Github, LinkedIn or X">
                             <Interaction.Behaviors>
-                                <viewModels:ScrollToTargetBehavior TargetId="SocialNetworks" />
+                                <behaviors:ScrollToTargetBehavior TargetId="SocialNetworks" />
                             </Interaction.Behaviors>
                         </HyperlinkButton>
                     </InlineUIContainer>
@@ -72,5 +63,5 @@
             <HyperlinkButton Theme="{StaticResource GitHubButton}" NavigateUri="https://www.github.com/SuperJMN" Content="SEE MY GITHUB PROFILE" Margin="0 40" />
         </StackPanel>
         <Image Width="400" Stretch="Uniform" Source="/Assets/profile.jpg" Margin="20" />
-    </viewModels:MyWrapPanel>
+    </controls:WrapPanel>
 </UserControl>

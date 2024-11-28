@@ -19,22 +19,7 @@
         <PackageReference Include="Avalonia.ReactiveUI" Version="$(AvaloniaVersion)"/>
         <PackageReference Include="Avalonia.Xaml.Behaviors" Version="11.2.0.1"/>
         <PackageReference Include="Microsoft.Maui.Essentials" Version="9.0.10"/>
-        <PackageReference Include="Zafiro.Avalonia" Version="12.0.14"/>
-    </ItemGroup>
-
-    <ItemGroup>
-      <Compile Update="Core\CaretControl.axaml.cs">
-        <DependentUpon>CaretControl.axaml</DependentUpon>
-        <SubType>Code</SubType>
-      </Compile>
-      <Compile Update="Core\TypewriterBanner.axaml.cs">
-        <DependentUpon>TypewriterBanner.axaml</DependentUpon>
-        <SubType>Code</SubType>
-      </Compile>
-      <Compile Update="Core\TypewriterTextControl.axaml.cs">
-        <DependentUpon>TypewriterTextControl.axaml</DependentUpon>
-        <SubType>Code</SubType>
-      </Compile>
+        <PackageReference Include="Zafiro.Avalonia" Version="12.0.15" />
     </ItemGroup>
 
 </Project>
