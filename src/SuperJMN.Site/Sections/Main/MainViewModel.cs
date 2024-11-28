@@ -1,12 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using Avalonia.Media.Imaging;
+using ReactiveUI;
 using SuperJMN.Site.ViewModels;
 
 namespace SuperJMN.Site.Sections.Main;
 
 public class MainViewModel : ViewModelBase
 {
+    private string textToTypeWrite;
+
     public MainViewModel()
     {
         Skills =
@@ -184,6 +187,12 @@ public class MainViewModel : ViewModelBase
     public IEnumerable<Skill> Skills { get; }
     public IEnumerable<Experience> Experiences { get; }
     public IEnumerable<Work> Works { get; }
+
+    public string TextToTypeWrite
+    {
+        get => textToTypeWrite;
+        set => this.RaiseAndSetIfChanged(ref textToTypeWrite, value);
+    }
 }
 
 public class FunFact

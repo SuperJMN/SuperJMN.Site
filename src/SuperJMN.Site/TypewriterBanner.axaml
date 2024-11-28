@@ -1,0 +1,20 @@
+<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:controls="using:SuperJMN.Site">
+    <Design.PreviewWith>
+        <controls:TypewriterBanner />
+    </Design.PreviewWith>
+
+    <Style Selector="controls|TypewriterBanner">
+        <!-- Set Defaults -->
+        <Setter Property="Template">
+            <ControlTemplate>
+                <TextBlock>
+                    <!-- <Interaction.Behaviors> -->
+                    <!--     <controls:TypewriterBehavior Done="{Binding Done}" TextToType="{TemplateBinding TextToType}" /> -->
+                    <!-- </Interaction.Behaviors> -->
+                </TextBlock>
+            </ControlTemplate>
+        </Setter>
+    </Style>
+</Styles>
