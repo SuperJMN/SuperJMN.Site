@@ -16,9 +16,13 @@
             <core:TypewriterControl FontSize="40" TypingLatency="0:0:0.03" TextWrapping="Wrap">
                 <core:TypewriterControl.Strings>
                   <core:Strings>
+                      <x:String>Avalonia MVP</x:String>
+                      <x:String>.NET Development</x:String>
                       <x:String>Open-source contributor</x:String>
-                      <x:String>Windows, Linux, Mac, Android, Android, WebAssembly</x:String>
-                      <x:String>Duro, durísimo</x:String>
+                      <x:String>Desktop + Mobile + Web</x:String>
+                      <x:String>Windows, Mac, Linux</x:String>
+                      <x:String>Android, iOS, WebAssembly</x:String>
+                      <x:String>Backend? Yes, I do.</x:String>
                   </core:Strings>
                 </core:TypewriterControl.Strings>
             </core:TypewriterControl>

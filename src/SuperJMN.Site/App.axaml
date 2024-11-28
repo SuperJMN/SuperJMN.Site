@@ -23,8 +23,8 @@
 
             <ResourceDictionary.MergedDictionaries>
                 <MergeResourceInclude Source="Sections/Main/Section.axaml" />
-                <MergeResourceInclude Source="TypewriterTextControl.axaml" />
-                <MergeResourceInclude Source="CaretControl.axaml" />
+                <MergeResourceInclude Source="Core/TypewriterTextControl.axaml" />
+                <MergeResourceInclude Source="Core/CaretControl.axaml" />
             </ResourceDictionary.MergedDictionaries>
 
         </ResourceDictionary>
