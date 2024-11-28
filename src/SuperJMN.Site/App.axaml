@@ -23,10 +23,7 @@
 
             <ResourceDictionary.MergedDictionaries>
                 <MergeResourceInclude Source="Sections/Main/Section.axaml" />
-                <MergeResourceInclude Source="Core/TypewriterTextControl.axaml" />
-                <MergeResourceInclude Source="Core/CaretControl.axaml" />
             </ResourceDictionary.MergedDictionaries>
-
         </ResourceDictionary>
 
     </Application.Resources>
@@ -34,6 +31,8 @@
     <Application.Styles>
 
         <FluentTheme />
+        
+        <StyleInclude Source="avares://Zafiro.Avalonia/Styles.axaml" />
 
         <Style Selector="TextBlock.Section">
             <Setter Property="FontSize" Value="30" />

@@ -2,15 +2,15 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             xmlns:viewModels="clr-namespace:SuperJMN.Site.ViewModels"
              xmlns:main="clr-namespace:SuperJMN.Site.Sections.Main"
+             xmlns:behaviors="clr-namespace:Zafiro.Avalonia.Behaviors;assembly=Zafiro.Avalonia"
              mc:Ignorable="d" d:DesignWidth="400" d:DesignHeight="450"
              x:Class="SuperJMN.Site.Sections.Main.Parts.Experience" x:DataType="main:MainViewModel">
     <Design.DataContext>
         <main:MainViewModel />
     </Design.DataContext>
 
-    <HeaderedContentControl Header="EXPERIENCE" viewModels:ScrollToTargetBehavior.TargetId="Experience">
+    <HeaderedContentControl Header="EXPERIENCE" behaviors:ScrollToTargetBehavior.TargetId="Experience">
         <HeaderedContentControl.HeaderTemplate>
             <DataTemplate DataType="x:Object">
                 <TextBlock Margin="0 0 0 20" Classes="Section" Text="{Binding}" />

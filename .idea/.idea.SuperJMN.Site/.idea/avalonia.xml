@@ -20,8 +20,14 @@
         <entry key="src/SuperJMN.Site/CaretControl.axaml" value="src/SuperJMN.Site.Desktop/SuperJMN.Site.Desktop.csproj" />
         <entry key="src/SuperJMN.Site/MainWindow.axaml" value="src/SuperJMN.Site.Desktop/SuperJMN.Site.Desktop.csproj" />
         <entry key="src/SuperJMN.Site/Sections/Main/MainView.axaml" value="src/SuperJMN.Site.Desktop/SuperJMN.Site.Desktop.csproj" />
+        <entry key="src/SuperJMN.Site/Sections/Main/Parts/Experience.axaml" value="src/SuperJMN.Site.Browser/SuperJMN.Site.Browser.csproj" />
+        <entry key="src/SuperJMN.Site/Sections/Main/Parts/ExperienceAndSkills.axaml" value="src/SuperJMN.Site.Browser/SuperJMN.Site.Browser.csproj" />
+        <entry key="src/SuperJMN.Site/Sections/Main/Parts/FunFacts.axaml" value="src/SuperJMN.Site.Browser/SuperJMN.Site.Browser.csproj" />
         <entry key="src/SuperJMN.Site/Sections/Main/Parts/Header.axaml" value="src/SuperJMN.Site.Desktop/SuperJMN.Site.Desktop.csproj" />
+        <entry key="src/SuperJMN.Site/Sections/Main/Parts/MyWork.axaml" value="src/SuperJMN.Site.Browser/SuperJMN.Site.Browser.csproj" />
         <entry key="src/SuperJMN.Site/Sections/Main/Parts/Skills.axaml" value="src/SuperJMN.Site.Browser/SuperJMN.Site.Browser.csproj" />
+        <entry key="src/SuperJMN.Site/Sections/Main/Parts/Social.axaml" value="src/SuperJMN.Site.Browser/SuperJMN.Site.Browser.csproj" />
+        <entry key="src/SuperJMN.Site/Sections/Main/Parts/ThisIsMe.axaml" value="src/SuperJMN.Site.Browser/SuperJMN.Site.Browser.csproj" />
         <entry key="src/SuperJMN.Site/TypewriterBanner.axaml" value="src/SuperJMN.Site.Browser/SuperJMN.Site.Browser.csproj" />
         <entry key="src/SuperJMN.Site/TypewriterTextControl.axaml" value="src/SuperJMN.Site.Desktop/SuperJMN.Site.Desktop.csproj" />
         <entry key="src/SuperJMN.Site/TypewriterTexts.axaml" value="src/SuperJMN.Site.Browser/SuperJMN.Site.Browser.csproj" />

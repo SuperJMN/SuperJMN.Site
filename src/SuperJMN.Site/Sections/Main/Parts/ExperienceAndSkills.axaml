@@ -5,6 +5,7 @@
              xmlns:viewModels="clr-namespace:SuperJMN.Site.ViewModels"
              xmlns:main="clr-namespace:SuperJMN.Site.Sections.Main"
              xmlns:parts="clr-namespace:SuperJMN.Site.Sections.Main.Parts"
+             xmlns:controls="clr-namespace:Zafiro.Avalonia.Controls;assembly=Zafiro.Avalonia"
              mc:Ignorable="d" d:DesignWidth="700"
              x:Class="SuperJMN.Site.Sections.Main.Parts.ExperienceAndSkills">
 
@@ -12,7 +13,7 @@
         <main:MainViewModel />
     </Design.DataContext>
 
-    <viewModels:MyWrapPanel HorizontalAlignment="Center" Margin="10">
+    <controls:WrapPanel HorizontalAlignment="Center" Margin="10">
         <parts:Experience Margin="10 0 20 0" />
         <parts:Skills Margin="10 0 20 0" />
 
@@ -25,20 +26,20 @@
             </AdaptiveBehavior>
         </Interaction.Behaviors>
 
-        <viewModels:MyWrapPanel.Styles>
-            <Style Selector="viewModels|MyWrapPanel.small">
+        <controls:WrapPanel.Styles>
+            <Style Selector="controls|WrapPanel.small">
                 <Setter Property="ItemWidth" Value="300" />
             </Style>
-            <Style Selector="viewModels|MyWrapPanel.medium">
+            <Style Selector="controls|WrapPanel.medium">
                 <Setter Property="ItemWidth" Value="400" />
             </Style>
-            <Style Selector="viewModels|MyWrapPanel.large">
+            <Style Selector="controls|WrapPanel.large">
                 <Setter Property="ItemWidth" Value="650" />
             </Style>
-            <Style Selector="viewModels|MyWrapPanel.wide">
+            <Style Selector="controls|WrapPanel.wide">
                 <Setter Property="ItemWidth" Value="550" />
             </Style>
-        </viewModels:MyWrapPanel.Styles>
+        </controls:WrapPanel.Styles>
 
-    </viewModels:MyWrapPanel>
+    </controls:WrapPanel>
 </UserControl>

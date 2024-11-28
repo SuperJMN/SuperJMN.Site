@@ -2,8 +2,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             xmlns:viewModels="clr-namespace:SuperJMN.Site.ViewModels"
              xmlns:main="clr-namespace:SuperJMN.Site.Sections.Main"
+             xmlns:controls="clr-namespace:Zafiro.Avalonia.Controls;assembly=Zafiro.Avalonia"
              mc:Ignorable="d" d:DesignWidth="1200"
              x:Class="SuperJMN.Site.Sections.Main.Parts.MyWork" x:DataType="main:MainViewModel">
 
@@ -15,7 +15,7 @@
         <ItemsControl ItemsSource="{Binding Works}">
             <ItemsControl.ItemsPanel>
                 <ItemsPanelTemplate>
-                    <viewModels:MyWrapPanel ItemWidth="400" />
+                    <controls:WrapPanel ItemWidth="400" />
                 </ItemsPanelTemplate>
             </ItemsControl.ItemsPanel>
             <ItemsControl.ItemTemplate>
@@ -24,8 +24,7 @@
                         <HyperlinkButton NavigateUri="{Binding Site}" VerticalAlignment="Stretch">
                             <DockPanel>
                                 <TextBlock TextDecorations="{x:Null}" Classes="Title" DockPanel.Dock="Top" Text="{Binding Name}" TextAlignment="Center" />
-                                <TextBlock DockPanel.Dock="Bottom" Text="{Binding Site}" />
-                                <Image Source="{Binding Snapshot}" Margin="0 10" />
+                                <Image RenderOptions.BitmapInterpolationMode="HighQuality" Source="{Binding Snapshot}" Margin="0 10" />
                             </DockPanel>
                         </HyperlinkButton>
                     </Border>
