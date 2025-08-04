@@ -3,7 +3,6 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:main="clr-namespace:SuperJMN.Site.Sections.Main"
-             xmlns:controls="clr-namespace:Zafiro.Avalonia.Controls;assembly=Zafiro.Avalonia"
              xmlns:behaviors="clr-namespace:Zafiro.Avalonia.Behaviors;assembly=Zafiro.Avalonia"
              mc:Ignorable="d"
              x:Class="SuperJMN.Site.Sections.Main.Parts.Social" x:DataType="main:MainViewModel">
@@ -15,7 +14,7 @@
     <ItemsControl ItemsSource="{Binding  SocialNetworks}" behaviors:ScrollToTargetBehavior.TargetId="SocialNetworks">
         <ItemsControl.ItemsPanel>
             <ItemsPanelTemplate>
-                <controls:WrapPanel ItemWidth="80" ItemHeight="86" />
+                <WrapPanelEnhanced ItemWidth="80" ItemHeight="86" />
             </ItemsPanelTemplate>
         </ItemsControl.ItemsPanel>
         <ItemsControl.ItemTemplate>

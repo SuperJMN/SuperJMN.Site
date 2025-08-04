@@ -17,13 +17,13 @@
     <Application.Resources>
 
         <ResourceDictionary>
-            <FontFamily x:Key="Rubik">avares://SuperJMN.Site/Assets/Fonts#Rubik</FontFamily>
-            <SolidColorBrush x:Key="AlmostBlack" Color="#4D4D4D" />
-            <SolidColorBrush x:Key="AlmostBlackClearer" Color="#6F6F6F" />
-
             <ResourceDictionary.MergedDictionaries>
                 <MergeResourceInclude Source="Sections/Main/Section.axaml" />
             </ResourceDictionary.MergedDictionaries>
+            
+            <FontFamily x:Key="Rubik">avares://SuperJMN.Site/Assets/Fonts#Rubik</FontFamily>
+            <SolidColorBrush x:Key="AlmostBlack" Color="#4D4D4D" />
+            <SolidColorBrush x:Key="AlmostBlackClearer" Color="#6F6F6F" />
         </ResourceDictionary>
 
     </Application.Resources>

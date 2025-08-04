@@ -12,8 +12,9 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="Nuke.Common" Version="9.0.1"/>
-        <PackageReference Include="Zafiro.Deployment" Version="14.0.2"/>
+        <PackageReference Include="Nuke.Common" Version="9.0.4" />
+        <PackageReference Include="Xaml.Behaviors.Avalonia" Version="11.3.2" />
+        <PackageReference Include="Zafiro.Deployment" Version="25.0.1" />
     </ItemGroup>
 
     <ItemGroup>

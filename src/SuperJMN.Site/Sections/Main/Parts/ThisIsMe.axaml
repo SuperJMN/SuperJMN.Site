@@ -2,8 +2,6 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             xmlns:controls="clr-namespace:Zafiro.Avalonia.Controls;assembly=Zafiro.Avalonia"
-             xmlns:behaviors="clr-namespace:Zafiro.Avalonia.Behaviors;assembly=Zafiro.Avalonia"
              mc:Ignorable="d"
              x:Class="SuperJMN.Site.Sections.Main.Parts.ThisIsMe">
 
@@ -45,7 +43,7 @@
         
     </UserControl.Resources>
 
-    <controls:WrapPanel ItemWidth="450">
+    <WrapPanelEnhanced ItemWidth="450">
         <StackPanel Margin="10">
             <TextBlock FontSize="40" FontWeight="Black" Foreground="#6F6F6F">THIS IS ME</TextBlock>
             <TextBlock Foreground="#6F6F6F" TextWrapping="Wrap" FontSize="16" Margin="0 20">
@@ -54,7 +52,7 @@
                     <InlineUIContainer>
                         <HyperlinkButton Theme="{StaticResource ContactMe}" VerticalAlignment="Center" Content="GitHub, LinkedIn or X">
                             <Interaction.Behaviors>
-                                <behaviors:ScrollToTargetBehavior TargetId="SocialNetworks" />
+                                <ScrollToTargetBehavior TargetId="SocialNetworks" />
                             </Interaction.Behaviors>
                         </HyperlinkButton>
                     </InlineUIContainer>
@@ -63,5 +61,5 @@
             <HyperlinkButton Theme="{StaticResource GitHubButton}" NavigateUri="https://www.github.com/SuperJMN" Content="SEE MY GITHUB PROFILE" Margin="0 40" />
         </StackPanel>
         <Image Width="400" Stretch="Uniform" Source="/Assets/profile.jpg" Margin="20" />
-    </controls:WrapPanel>
+    </WrapPanelEnhanced>
 </UserControl>

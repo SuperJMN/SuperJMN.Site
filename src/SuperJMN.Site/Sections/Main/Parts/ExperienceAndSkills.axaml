@@ -13,7 +13,7 @@
         <main:MainViewModel />
     </Design.DataContext>
 
-    <controls:WrapPanel HorizontalAlignment="Center" Margin="10">
+    <WrapPanelEnhanced HorizontalAlignment="Center" Margin="10">
         <parts:Experience Margin="10 0 20 0" />
         <parts:Skills Margin="10 0 20 0" />
 
@@ -26,20 +26,20 @@
             </AdaptiveBehavior>
         </Interaction.Behaviors>
 
-        <controls:WrapPanel.Styles>
-            <Style Selector="controls|WrapPanel.small">
+        <WrapPanelEnhanced.Styles>
+            <Style Selector="WrapPanelEnhanced.small">
                 <Setter Property="ItemWidth" Value="300" />
             </Style>
-            <Style Selector="controls|WrapPanel.medium">
+            <Style Selector="WrapPanelEnhanced.medium">
                 <Setter Property="ItemWidth" Value="400" />
             </Style>
-            <Style Selector="controls|WrapPanel.large">
+            <Style Selector="WrapPanelEnhanced.large">
                 <Setter Property="ItemWidth" Value="650" />
             </Style>
-            <Style Selector="controls|WrapPanel.wide">
+            <Style Selector="WrapPanelEnhanced.wide">
                 <Setter Property="ItemWidth" Value="550" />
             </Style>
-        </controls:WrapPanel.Styles>
+        </WrapPanelEnhanced.Styles>
 
-    </controls:WrapPanel>
+    </WrapPanelEnhanced>
 </UserControl>
