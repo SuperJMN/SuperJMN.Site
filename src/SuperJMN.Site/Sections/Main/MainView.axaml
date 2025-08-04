@@ -7,7 +7,7 @@
              xmlns:core="clr-namespace:SuperJMN.Site.Core"
              mc:Ignorable="d" d:DesignWidth="1400"
              x:Class="SuperJMN.Site.Sections.Main.MainView"
-             Background="White"
+             Background="White" Foreground="{StaticResource AlmostBlack}"
              x:DataType="main:MainViewModel">
     <Design.DataContext>
         <main:MainViewModel />
