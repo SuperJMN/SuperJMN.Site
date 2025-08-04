@@ -3,9 +3,9 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:controls="clr-namespace:Zafiro.Avalonia.Controls;assembly=Zafiro.Avalonia"
-             xmlns:avalonia="clr-namespace:Zafiro.Avalonia;assembly=Zafiro.Avalonia"
+            xmlns:avalonia="clr-namespace:Zafiro.Avalonia;assembly=Zafiro.Avalonia"
              mc:Ignorable="d" d:DesignWidth="500" d:DesignHeight="450"
-             x:Class="SuperJMN.Site.Sections.Main.Parts.Header" Foreground="White"
+             x:Class="SuperJMN.Site.Sections.Main.Parts.Header"
              FontWeight="SemiBold" FontFamily="{StaticResource Rubik}" Background="#2F2F2F">
 
     <Grid ColumnDefinitions="2* 6* 5*">
@@ -13,8 +13,8 @@
             <ImageBrush Source="/Assets/background.jpg" Opacity="0.5" Stretch="UniformToFill" />
         </Grid.Background>
         <StackPanel Grid.Column="1" Grid.ColumnSpan="2" VerticalAlignment="Center" Spacing="20">
-            <TextBlock TextWrapping="Wrap" Text="I'm José Manuel Nieto" FontSize="60" />
-            <controls:TypewriterControl FontSize="40" TypingLatency="0:0:0.03" TextWrapping="Wrap">
+            <TextBlock TextWrapping="Wrap" Text="I'm José Manuel Nieto" FontSize="60" Foreground="White" />
+            <controls:TypewriterControl FontSize="40" TypingLatency="0:0:0.03" TextWrapping="Wrap" Foreground="White">
                 <controls:TypewriterControl.Strings>
                   <avalonia:Strings>
                       <x:String>Avalonia MVP</x:String>
